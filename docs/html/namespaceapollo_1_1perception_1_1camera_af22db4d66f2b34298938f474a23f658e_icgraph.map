@@ -1,0 +1,5 @@
+<map id="apollo::perception::camera::letterbox" name="apollo::perception::camera::letterbox">
+<area shape="rect" id="node1" title=" " alt="" coords="453,13,600,54"/>
+<area shape="rect" id="node2" href="$namespaceapollo_1_1perception_1_1camera.html#a3a2366605d7d57c5b3e8fafbd6d0dbce" title=" " alt="" coords="247,13,405,54"/>
+<area shape="rect" id="node3" href="$classapollo_1_1perception_1_1camera_1_1YoloV8sDetector.html#a3cec1e8f0774a04e79de1e99e4c9847f" title=" " alt="" coords="5,5,199,61"/>
+</map>

@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Myolov8_pose_demo: driver_adapter/ddr/ddr_info.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Myolov8_pose_demo
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ef67e9edbecde6debc60c19945de0902.html">driver_adapter</a></li><li class="navelem"><a class="el" href="dir_af5c87c98c989ba3731aa997c87c6668.html">ddr</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ddr_info.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ddr__info_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __DDR_INFO_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __DDR_INFO_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;fcntl.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;sys/mman.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// /***********************************************************/</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// // ddr_224版本使用</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// #define NPU_DDR0_BASE_ADDR (0x800000000UL + 0x80000000UL)</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// #define NPU_DDR1_BASE_ADDR (0x1000000000UL + 0x80000000UL)</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// #define NPU_DDR2_BASE_ADDR (0x1800000000UL)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// #define NPU_DDR0_SIZE 0x80000000UL</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// #define NPU_DDR1_SIZE 0x80000000UL</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// #define NPU_DDR2_SIZE 0x100000000UL</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// /***********************************************************/</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// // ddr_233版本使用</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// #define NPU_DDR0_BASE_ADDR (0x800000000UL + 0x80000000UL)</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// #define NPU_DDR1_BASE_ADDR (0x1000000000UL + 0x40000000UL)</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// #define NPU_DDR2_BASE_ADDR (0x1800000000UL + 0x40000000UL)</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// #define NPU_DDR0_SIZE 0x80000000UL</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// #define NPU_DDR1_SIZE 0xC0000000UL</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// #define NPU_DDR2_SIZE 0xC0000000UL</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">/***********************************************************/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// ddr_333版本使用</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="ddr__info_8h.html#a6113ce45bc213dbfd4f1390a0b1abbdc">   32</a></span>&#160;<span class="preprocessor">#define NPU_DDR0_BASE_ADDR (0x800000000UL + 0x40000000UL)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="ddr__info_8h.html#a57a227e03d89acadbf6f79d96c1110c4">   33</a></span>&#160;<span class="preprocessor">#define NPU_DDR1_BASE_ADDR (0x1000000000UL + 0x40000000UL)</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="ddr__info_8h.html#ad96b813111945f3860f9dce1a347f214">   34</a></span>&#160;<span class="preprocessor">#define NPU_DDR2_BASE_ADDR (0x1800000000UL + 0x40000000UL)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="ddr__info_8h.html#aceb306dbe6f58d8b06775418b90591a5">   36</a></span>&#160;<span class="preprocessor">#define NPU_DDR0_SIZE 0xC0000000UL</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="ddr__info_8h.html#a2ad58d7d25606040b8617566c8ab7575">   37</a></span>&#160;<span class="preprocessor">#define NPU_DDR1_SIZE 0xC0000000UL</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="ddr__info_8h.html#a5e7d92fa7daa0b7a552ebf0fc96bda3e">   38</a></span>&#160;<span class="preprocessor">#define NPU_DDR2_SIZE 0xC0000000UL</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">/***********************************************************/</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">int</span> <a class="code" href="ddr__info_8h.html#a89abee82cdb65d2c360c06c0074298fc">mmap_addr</a>(<span class="keywordtype">int</span> mmap_type);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">void</span> <a class="code" href="ddr__info_8h.html#afe39ca7efa91b2dffd3767c0f2ab633e">close_mmap_addr</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;uint8_t <a class="code" href="ddr__info_8h.html#a58e1d4315676c8dc125385aa9a493676">qm935_ddr_read_reg8</a>(uint64_t ddr_base_addr, uint64_t <a class="code" href="structdata__addr.html">data_addr</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="ddr__info_8h.html#a1f28b954f6b5bfd4f63437dd55ac7d9c">qm935_ddr_read_align_data</a>(uint64_t ddr_base_addr, uint64_t <a class="code" href="structdata__addr.html">data_addr</a>, uint8_t *rdata, uint32_t data_len);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;uint8_t <a class="code" href="ddr__info_8h.html#aff812bd77b0a74a8fc151e3453f938c4">qm935_ddr_write_reg8</a>(uint64_t ddr_base_addr, uint64_t <a class="code" href="structdata__addr.html">data_addr</a>, uint8_t wdata);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;uint8_t <a class="code" href="ddr__info_8h.html#a7a3f338ebd022f592b5e7e87fe37302f">qm935_ddr_write_align_data</a>(uint64_t ddr_base_addr, uint64_t <a class="code" href="structdata__addr.html">data_addr</a>, uint8_t *wdata, uint32_t data_len);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;uint8_t <a class="code" href="ddr__info_8h.html#a71f33189dff32ac4277ed41964e08cd4">qm935_ddr_write_reg32</a>(uint64_t ddr_base_addr, uint64_t <a class="code" href="structdata__addr.html">data_addr</a>, uint32_t wdata);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">/* 大模型测试ddr读写接口 */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;uint8_t <a class="code" href="ddr__info_8h.html#ae648785585cbde48d7be1db00a9ab3d5">larger_model_test_ddr_read_reg8</a>(<span class="keywordtype">void</span> *<a class="code" href="structdata__addr.html">data_addr</a>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span> <a class="code" href="ddr__info_8h.html#ae3f9786399868cb64fcc690b03765139">larger_model_test_ddr_read_align_data</a>(<span class="keywordtype">void</span> *<a class="code" href="structdata__addr.html">data_addr</a>, uint8_t *rdata, uint32_t data_len);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">void</span> <a class="code" href="ddr__info_8h.html#aec0da130117afaa6982a2179fa7f9f20">larger_model_test_ddr_write_reg8</a>(<span class="keywordtype">void</span> *<a class="code" href="structdata__addr.html">data_addr</a>, uint8_t wdata);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="ddr__info_8h.html#a797c53281ed40a018f31bef4ebfe1adc">larger_model_test_ddr_write_align_data</a>(<span class="keywordtype">void</span> *<a class="code" href="structdata__addr.html">data_addr</a>, uint8_t *wdata, uint32_t data_len);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="addr__info_8c_html_a67e4118c5c41d9df42b203576324fecb"><div class="ttname"><a href="ddr__info_8c.html#a67e4118c5c41d9df42b203576324fecb">npu_ddr1_base</a></div><div class="ttdeci">void * npu_ddr1_base</div><div class="ttdef"><b>Definition:</b> ddr_info.c:13</div></div>
+<div class="ttc" id="adriver__adapter_2CMakeLists_8txt_html_ad22a7a32d6cfdc01e3802dd2ed60243b"><div class="ttname"><a href="driver__adapter_2CMakeLists_8txt.html#ad22a7a32d6cfdc01e3802dd2ed60243b">set</a></div><div class="ttdeci">set(DRIVER_ADAPTER_NAME DRV_ADP) file(GLOB DRV_ADP_SOURCES &quot;$</div><div class="ttdef"><b>Definition:</b> CMakeLists.txt:1</div></div>
+<div class="ttc" id="addr__info_8h_html_aec0da130117afaa6982a2179fa7f9f20"><div class="ttname"><a href="ddr__info_8h.html#aec0da130117afaa6982a2179fa7f9f20">larger_model_test_ddr_write_reg8</a></div><div class="ttdeci">void larger_model_test_ddr_write_reg8(void *data_addr, uint8_t wdata)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:156</div></div>
+<div class="ttc" id="addr__info_8h_html_ae3f9786399868cb64fcc690b03765139"><div class="ttname"><a href="ddr__info_8h.html#ae3f9786399868cb64fcc690b03765139">larger_model_test_ddr_read_align_data</a></div><div class="ttdeci">void larger_model_test_ddr_read_align_data(void *data_addr, uint8_t *rdata, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:151</div></div>
+<div class="ttc" id="azeus__operator_8c_html_a6a55f4133d873530a4b9f497b8c29d2e"><div class="ttname"><a href="zeus__operator_8c.html#a6a55f4133d873530a4b9f497b8c29d2e">USE_NORM_MEM</a></div><div class="ttdeci">#define USE_NORM_MEM</div><div class="ttdef"><b>Definition:</b> zeus_operator.c:11</div></div>
+<div class="ttc" id="azeus__operator_8h_html"><div class="ttname"><a href="zeus__operator_8h.html">zeus_operator.h</a></div></div>
+<div class="ttc" id="addr__info_8h_html"><div class="ttname"><a href="ddr__info_8h.html">ddr_info.h</a></div></div>
+<div class="ttc" id="addr__info_8c_html_a2464c4b3534b0f8d15e1b1e3bf2651d5"><div class="ttname"><a href="ddr__info_8c.html#a2464c4b3534b0f8d15e1b1e3bf2651d5">BJXX_IOREMAP2USER_CONFIG</a></div><div class="ttdeci">#define BJXX_IOREMAP2USER_CONFIG</div><div class="ttdef"><b>Definition:</b> ddr_info.c:6</div></div>
+<div class="ttc" id="addr__info_8c_html_a71f33189dff32ac4277ed41964e08cd4"><div class="ttname"><a href="ddr__info_8c.html#a71f33189dff32ac4277ed41964e08cd4">qm935_ddr_write_reg32</a></div><div class="ttdeci">uint8_t qm935_ddr_write_reg32(uint64_t ddr_base_addr, uint64_t data_addr, uint32_t wdata)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:132</div></div>
+<div class="ttc" id="addr__info_8c_html_a1f28b954f6b5bfd4f63437dd55ac7d9c"><div class="ttname"><a href="ddr__info_8c.html#a1f28b954f6b5bfd4f63437dd55ac7d9c">qm935_ddr_read_align_data</a></div><div class="ttdeci">void qm935_ddr_read_align_data(uint64_t ddr_base_addr, uint64_t data_addr, uint8_t *rdata, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:89</div></div>
+<div class="ttc" id="addr__info_8h_html_a1f28b954f6b5bfd4f63437dd55ac7d9c"><div class="ttname"><a href="ddr__info_8h.html#a1f28b954f6b5bfd4f63437dd55ac7d9c">qm935_ddr_read_align_data</a></div><div class="ttdeci">void qm935_ddr_read_align_data(uint64_t ddr_base_addr, uint64_t data_addr, uint8_t *rdata, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:89</div></div>
+<div class="ttc" id="addr__info_8c_html_abad34a097a52d1cadcfeee2b9c159063"><div class="ttname"><a href="ddr__info_8c.html#abad34a097a52d1cadcfeee2b9c159063">close_mmap_addr</a></div><div class="ttdeci">void close_mmap_addr()</div><div class="ttdef"><b>Definition:</b> ddr_info.c:65</div></div>
+<div class="ttc" id="addr__info_8h_html_a71f33189dff32ac4277ed41964e08cd4"><div class="ttname"><a href="ddr__info_8h.html#a71f33189dff32ac4277ed41964e08cd4">qm935_ddr_write_reg32</a></div><div class="ttdeci">uint8_t qm935_ddr_write_reg32(uint64_t ddr_base_addr, uint64_t data_addr, uint32_t wdata)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:132</div></div>
+<div class="ttc" id="addr__info_8c_html_a7a3f338ebd022f592b5e7e87fe37302f"><div class="ttname"><a href="ddr__info_8c.html#a7a3f338ebd022f592b5e7e87fe37302f">qm935_ddr_write_align_data</a></div><div class="ttdeci">uint8_t qm935_ddr_write_align_data(uint64_t ddr_base_addr, uint64_t data_addr, uint8_t *wdata, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:119</div></div>
+<div class="ttc" id="addr__info_8h_html_ae648785585cbde48d7be1db00a9ab3d5"><div class="ttname"><a href="ddr__info_8h.html#ae648785585cbde48d7be1db00a9ab3d5">larger_model_test_ddr_read_reg8</a></div><div class="ttdeci">uint8_t larger_model_test_ddr_read_reg8(void *data_addr)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:146</div></div>
+<div class="ttc" id="addr__info_8c_html_af34676c68475bd13963809df9c2d839b"><div class="ttname"><a href="ddr__info_8c.html#af34676c68475bd13963809df9c2d839b">npu_ddr0_base</a></div><div class="ttdeci">void * npu_ddr0_base</div><div class="ttdef"><b>Definition:</b> ddr_info.c:12</div></div>
+<div class="ttc" id="addr__info_8h_html_aceb306dbe6f58d8b06775418b90591a5"><div class="ttname"><a href="ddr__info_8h.html#aceb306dbe6f58d8b06775418b90591a5">NPU_DDR0_SIZE</a></div><div class="ttdeci">#define NPU_DDR0_SIZE</div><div class="ttdef"><b>Definition:</b> ddr_info.h:36</div></div>
+<div class="ttc" id="addr__info_8c_html_a931b90e59e9be4de26d13e758811b77a"><div class="ttname"><a href="ddr__info_8c.html#a931b90e59e9be4de26d13e758811b77a">npu_ddr2_base</a></div><div class="ttdeci">void * npu_ddr2_base</div><div class="ttdef"><b>Definition:</b> ddr_info.c:14</div></div>
+<div class="ttc" id="astructdata__addr_html"><div class="ttname"><a href="structdata__addr.html">data_addr</a></div><div class="ttdef"><b>Definition:</b> zeus_operator.h:34</div></div>
+<div class="ttc" id="addr__info_8h_html_a7a3f338ebd022f592b5e7e87fe37302f"><div class="ttname"><a href="ddr__info_8h.html#a7a3f338ebd022f592b5e7e87fe37302f">qm935_ddr_write_align_data</a></div><div class="ttdeci">uint8_t qm935_ddr_write_align_data(uint64_t ddr_base_addr, uint64_t data_addr, uint8_t *wdata, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:119</div></div>
+<div class="ttc" id="addr__info_8h_html_a6113ce45bc213dbfd4f1390a0b1abbdc"><div class="ttname"><a href="ddr__info_8h.html#a6113ce45bc213dbfd4f1390a0b1abbdc">NPU_DDR0_BASE_ADDR</a></div><div class="ttdeci">#define NPU_DDR0_BASE_ADDR</div><div class="ttdef"><b>Definition:</b> ddr_info.h:32</div></div>
+<div class="ttc" id="adriver__adapter_2CMakeLists_8txt_html_a1404e1c84f7012142697c3cd2c32dc09"><div class="ttname"><a href="driver__adapter_2CMakeLists_8txt.html#a1404e1c84f7012142697c3cd2c32dc09">message</a></div><div class="ttdeci">*c message(STATUS &quot;DRV_ADP_SOURCES: &quot; &quot;${DRV_ADP_SOURCES}&quot;) add_library($</div><div class="ttdef"><b>Definition:</b> CMakeLists.txt:4</div></div>
+<div class="ttc" id="addr__info_8h_html_a2ad58d7d25606040b8617566c8ab7575"><div class="ttname"><a href="ddr__info_8h.html#a2ad58d7d25606040b8617566c8ab7575">NPU_DDR1_SIZE</a></div><div class="ttdeci">#define NPU_DDR1_SIZE</div><div class="ttdef"><b>Definition:</b> ddr_info.h:37</div></div>
+<div class="ttc" id="addr__info_8c_html_a58e1d4315676c8dc125385aa9a493676"><div class="ttname"><a href="ddr__info_8c.html#a58e1d4315676c8dc125385aa9a493676">qm935_ddr_read_reg8</a></div><div class="ttdeci">uint8_t qm935_ddr_read_reg8(uint64_t ddr_base_addr, uint64_t data_addr)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:78</div></div>
+<div class="ttc" id="addr__info_8h_html_aff812bd77b0a74a8fc151e3453f938c4"><div class="ttname"><a href="ddr__info_8h.html#aff812bd77b0a74a8fc151e3453f938c4">qm935_ddr_write_reg8</a></div><div class="ttdeci">uint8_t qm935_ddr_write_reg8(uint64_t ddr_base_addr, uint64_t data_addr, uint8_t wdata)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:106</div></div>
+<div class="ttc" id="addr__info_8h_html_a5e7d92fa7daa0b7a552ebf0fc96bda3e"><div class="ttname"><a href="ddr__info_8h.html#a5e7d92fa7daa0b7a552ebf0fc96bda3e">NPU_DDR2_SIZE</a></div><div class="ttdeci">#define NPU_DDR2_SIZE</div><div class="ttdef"><b>Definition:</b> ddr_info.h:38</div></div>
+<div class="ttc" id="azeus__operator_8h_html_a3135494c31c4325c179bfefcb09bed86"><div class="ttname"><a href="zeus__operator_8h.html#a3135494c31c4325c179bfefcb09bed86">REG8</a></div><div class="ttdeci">#define REG8(addr)</div><div class="ttdef"><b>Definition:</b> zeus_operator.h:59</div></div>
+<div class="ttc" id="addr__info_8h_html_a58e1d4315676c8dc125385aa9a493676"><div class="ttname"><a href="ddr__info_8h.html#a58e1d4315676c8dc125385aa9a493676">qm935_ddr_read_reg8</a></div><div class="ttdeci">uint8_t qm935_ddr_read_reg8(uint64_t ddr_base_addr, uint64_t data_addr)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:78</div></div>
+<div class="ttc" id="addr__info_8h_html_a797c53281ed40a018f31bef4ebfe1adc"><div class="ttname"><a href="ddr__info_8h.html#a797c53281ed40a018f31bef4ebfe1adc">larger_model_test_ddr_write_align_data</a></div><div class="ttdeci">void larger_model_test_ddr_write_align_data(void *data_addr, uint8_t *wdata, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:161</div></div>
+<div class="ttc" id="addr__info_8h_html_a89abee82cdb65d2c360c06c0074298fc"><div class="ttname"><a href="ddr__info_8h.html#a89abee82cdb65d2c360c06c0074298fc">mmap_addr</a></div><div class="ttdeci">int mmap_addr(int mmap_type)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:16</div></div>
+<div class="ttc" id="addr__info_8h_html_ad96b813111945f3860f9dce1a347f214"><div class="ttname"><a href="ddr__info_8h.html#ad96b813111945f3860f9dce1a347f214">NPU_DDR2_BASE_ADDR</a></div><div class="ttdeci">#define NPU_DDR2_BASE_ADDR</div><div class="ttdef"><b>Definition:</b> ddr_info.h:34</div></div>
+<div class="ttc" id="addr__info_8c_html_aff812bd77b0a74a8fc151e3453f938c4"><div class="ttname"><a href="ddr__info_8c.html#aff812bd77b0a74a8fc151e3453f938c4">qm935_ddr_write_reg8</a></div><div class="ttdeci">uint8_t qm935_ddr_write_reg8(uint64_t ddr_base_addr, uint64_t data_addr, uint8_t wdata)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:106</div></div>
+<div class="ttc" id="addr__info_8c_html_ae3f9786399868cb64fcc690b03765139"><div class="ttname"><a href="ddr__info_8c.html#ae3f9786399868cb64fcc690b03765139">larger_model_test_ddr_read_align_data</a></div><div class="ttdeci">void larger_model_test_ddr_read_align_data(void *data_addr, uint8_t *rdata, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:151</div></div>
+<div class="ttc" id="addr__info_8c_html_a797c53281ed40a018f31bef4ebfe1adc"><div class="ttname"><a href="ddr__info_8c.html#a797c53281ed40a018f31bef4ebfe1adc">larger_model_test_ddr_write_align_data</a></div><div class="ttdeci">void larger_model_test_ddr_write_align_data(void *data_addr, uint8_t *wdata, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:161</div></div>
+<div class="ttc" id="addr__info_8c_html_aec0da130117afaa6982a2179fa7f9f20"><div class="ttname"><a href="ddr__info_8c.html#aec0da130117afaa6982a2179fa7f9f20">larger_model_test_ddr_write_reg8</a></div><div class="ttdeci">void larger_model_test_ddr_write_reg8(void *data_addr, uint8_t wdata)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:156</div></div>
+<div class="ttc" id="addr__info_8h_html_a57a227e03d89acadbf6f79d96c1110c4"><div class="ttname"><a href="ddr__info_8h.html#a57a227e03d89acadbf6f79d96c1110c4">NPU_DDR1_BASE_ADDR</a></div><div class="ttdeci">#define NPU_DDR1_BASE_ADDR</div><div class="ttdef"><b>Definition:</b> ddr_info.h:33</div></div>
+<div class="ttc" id="addr__info_8h_html_afe39ca7efa91b2dffd3767c0f2ab633e"><div class="ttname"><a href="ddr__info_8h.html#afe39ca7efa91b2dffd3767c0f2ab633e">close_mmap_addr</a></div><div class="ttdeci">void close_mmap_addr(void)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:65</div></div>
+<div class="ttc" id="addr__info_8c_html_ae648785585cbde48d7be1db00a9ab3d5"><div class="ttname"><a href="ddr__info_8c.html#ae648785585cbde48d7be1db00a9ab3d5">larger_model_test_ddr_read_reg8</a></div><div class="ttdeci">uint8_t larger_model_test_ddr_read_reg8(void *data_addr)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:146</div></div>
+<div class="ttc" id="azeus__operator_8h_html_ab36ca64870d974df84f70a61b828b07b"><div class="ttname"><a href="zeus__operator_8h.html#ab36ca64870d974df84f70a61b828b07b">REG32</a></div><div class="ttdeci">#define REG32(addr)</div><div class="ttdef"><b>Definition:</b> zeus_operator.h:60</div></div>
+<div class="ttc" id="addr__info_8c_html_a89abee82cdb65d2c360c06c0074298fc"><div class="ttname"><a href="ddr__info_8c.html#a89abee82cdb65d2c360c06c0074298fc">mmap_addr</a></div><div class="ttdeci">int mmap_addr(int mmap_type)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:16</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

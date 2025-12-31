@@ -1,0 +1,7 @@
+<map id="apollo::perception::camera::YoloV8sDetector::Detect" name="apollo::perception::camera::YoloV8sDetector::Detect">
+<area shape="rect" id="node1" title=" " alt="" coords="5,41,199,97"/>
+<area shape="rect" id="node2" href="$utils_8c.html#a7aea466b596d37ccf10b87dddcaa0d30" title=" " alt="" coords="273,5,379,32"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a6d498a0a468bfab3973296fbf6af7b6f" title=" " alt="" coords="279,56,373,83"/>
+<area shape="rect" id="node4" href="$namespaceapollo_1_1perception_1_1camera.html#a3a2366605d7d57c5b3e8fafbd6d0dbce" title=" " alt="" coords="247,107,405,149"/>
+<area shape="rect" id="node5" href="$namespaceapollo_1_1perception_1_1camera.html#af22db4d66f2b34298938f474a23f658e" title=" " alt="" coords="453,107,600,149"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="yolov8s/yolov8s_detector.h" name="yolov8s/yolov8s_detector.h">
+<area shape="rect" id="node1" title="YOLOv8s 手势检测器类头文件" alt="" coords="123,5,323,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,87,64,114"/>
+<area shape="rect" id="node3" title=" " alt="" coords="88,87,165,114"/>
+<area shape="rect" id="node4" title=" " alt="" coords="189,87,256,114"/>
+<area shape="rect" id="node5" href="$zeus__operator_8h.html" title=" " alt="" coords="280,80,443,121"/>
+<area shape="rect" id="node10" href="$yolov8s__common_8h.html" title=" " alt="" coords="471,87,620,114"/>
+<area shape="rect" id="node6" title=" " alt="" coords="128,169,195,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="219,169,301,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="326,169,397,196"/>
+<area shape="rect" id="node9" title=" " alt="" coords="421,169,491,196"/>
+<area shape="rect" id="node11" title=" " alt="" coords="516,169,583,196"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="init_npu" name="init_npu">
+<area shape="rect" id="node1" title=" " alt="" coords="239,13,313,39"/>
+<area shape="rect" id="node2" href="$classcamera_1_1YoloV8sDetector.html#ab81df55343d41583d1cea894d46a83a2" title="初始化检测器，包括模型加载和必要资源分配" alt="" coords="5,5,191,47"/>
+</map>

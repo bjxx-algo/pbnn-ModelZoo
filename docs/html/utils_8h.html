@@ -1,0 +1,803 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Myolov8_pose_demo: driver_adapter/utils/utils.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Myolov8_pose_demo
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ef67e9edbecde6debc60c19945de0902.html">driver_adapter</a></li><li class="navelem"><a class="el" href="dir_68f0be0e7fb504eb5e1c44eed522a7a0.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">utils.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="zeus__operator_8h_source.html">driver_adapter/zeus_operator.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+utils.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h__incl.png" border="0" usemap="#driver__adapter_2utils_2utils_8h" alt=""/></div>
+<map name="driver__adapter_2utils_2utils_8h" id="driver__adapter_2utils_2utils_8h">
+<area shape="rect" title=" " alt="" coords="168,5,317,47"/>
+<area shape="rect" title=" " alt="" coords="5,184,72,211"/>
+<area shape="rect" title=" " alt="" coords="104,184,187,211"/>
+<area shape="rect" title=" " alt="" coords="215,184,286,211"/>
+<area shape="rect" title=" " alt="" coords="313,184,383,211"/>
+<area shape="rect" title=" " alt="" coords="389,102,459,129"/>
+<area shape="rect" href="zeus__operator_8h.html" title=" " alt="" coords="111,95,262,136"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h__dep__incl.png" border="0" usemap="#driver__adapter_2utils_2utils_8hdep" alt=""/></div>
+<map name="driver__adapter_2utils_2utils_8hdep" id="driver__adapter_2utils_2utils_8hdep">
+<area shape="rect" title=" " alt="" coords="107,5,256,47"/>
+<area shape="rect" href="utils_8c.html" title=" " alt="" coords="5,95,155,136"/>
+<area shape="rect" href="yolov8s__detector_8cc.html" title=" " alt="" coords="179,102,386,129"/>
+</map>
+</div>
+</div>
+<p><a href="utils_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a6d498a0a468bfab3973296fbf6af7b6f"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a6d498a0a468bfab3973296fbf6af7b6f">GetFileSize</a> (uint8_t *filename)</td></tr>
+<tr class="separator:a6d498a0a468bfab3973296fbf6af7b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aea466b596d37ccf10b87dddcaa0d30"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a7aea466b596d37ccf10b87dddcaa0d30">get_file_data</a> (uint8_t *file_name, uint32_t data_len)</td></tr>
+<tr class="separator:a7aea466b596d37ccf10b87dddcaa0d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aead9eb939dcd991cbe197f508534cf49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#aead9eb939dcd991cbe197f508534cf49">read_ddr_data</a> (uint8_t *read_data, void *<a class="el" href="structdata__addr.html">data_addr</a>, uint32_t data_len)</td></tr>
+<tr class="separator:aead9eb939dcd991cbe197f508534cf49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02887d7b9deb9c0ae4bcb6d30ab02db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#aa02887d7b9deb9c0ae4bcb6d30ab02db">write_data_to_ddr</a> (uint8_t *write_data, void *<a class="el" href="structdata__addr.html">data_addr</a>, uint32_t data_len, uint32_t verify_flag, uint8_t *data_name)</td></tr>
+<tr class="separator:aa02887d7b9deb9c0ae4bcb6d30ab02db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a489eb517328b38e77957a3d3f70d03b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a489eb517328b38e77957a3d3f70d03b6">write_file_to_ddr</a> (uint8_t *file_name, void *<a class="el" href="structdata__addr.html">data_addr</a>, uint32_t data_len, uint8_t *data_name, int verify_flag)</td></tr>
+<tr class="separator:a489eb517328b38e77957a3d3f70d03b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae15631f5e08621b3294a3e93a6d05eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#aae15631f5e08621b3294a3e93a6d05eb">read_ddr_data_to_file</a> (uint8_t *file_name, void *<a class="el" href="structdata__addr.html">data_addr</a>, uint32_t data_len, <a class="el" href="zeus__operator_8h.html#a10bfa92e6a552ac99f640e1ffe9775b4">DATA_PARAM</a> data_param)</td></tr>
+<tr class="separator:aae15631f5e08621b3294a3e93a6d05eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94a7b1cb12f109914fe5cf8fa11f3197"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a94a7b1cb12f109914fe5cf8fa11f3197">fill_output_data</a> (void *<a class="el" href="structdata__addr.html">data_addr</a>, uint32_t data_len)</td></tr>
+<tr class="separator:a94a7b1cb12f109914fe5cf8fa11f3197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40bab8c5941421f3d2e744fe64ff73c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a40bab8c5941421f3d2e744fe64ff73c3">my_free</a> (uint8_t ***in_file_path, uint32_t in_file_size)</td></tr>
+<tr class="separator:a40bab8c5941421f3d2e744fe64ff73c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a96b4c30bdca59921bdc8bfd5c8b456"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a4a96b4c30bdca59921bdc8bfd5c8b456">verify_int8_data</a> (uint8_t *true_nchw_data, uint8_t *ddr_nchw_data, uint32_t data_len)</td></tr>
+<tr class="separator:a4a96b4c30bdca59921bdc8bfd5c8b456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a802be4af1b2d3cc2cbfe6d360224e933"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a802be4af1b2d3cc2cbfe6d360224e933">verify_fp16_data</a> (uint8_t *true_nchw_data, uint8_t *ddr_nchw_data, uint32_t data_len)</td></tr>
+<tr class="separator:a802be4af1b2d3cc2cbfe6d360224e933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a4f12c87dbcbe5a797107d6e0ae95a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a99a4f12c87dbcbe5a797107d6e0ae95a">check_output_data</a> (uint8_t *output_file, void *ddr_data_addr, uint32_t data_len, uint8_t *model_name, <a class="el" href="zeus__operator_8h.html#a10bfa92e6a552ac99f640e1ffe9775b4">DATA_PARAM</a> data_param)</td></tr>
+<tr class="separator:a99a4f12c87dbcbe5a797107d6e0ae95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b5745115edc7c29e6144d3c958a1cbf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a7b5745115edc7c29e6144d3c958a1cbf">write_larger_model_data</a> (uint8_t *data, void *<a class="el" href="structdata__addr.html">data_addr</a>, uint32_t data_len, uint32_t verify_flag, uint8_t *data_name)</td></tr>
+<tr class="separator:a7b5745115edc7c29e6144d3c958a1cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fc7b5d82e78f2ecbb62c65daf2a276a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a7fc7b5d82e78f2ecbb62c65daf2a276a">read_larger_model_data</a> (uint8_t *read_data, void *<a class="el" href="structdata__addr.html">data_addr</a>, uint32_t data_len)</td></tr>
+<tr class="separator:a7fc7b5d82e78f2ecbb62c65daf2a276a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a99a4f12c87dbcbe5a797107d6e0ae95a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99a4f12c87dbcbe5a797107d6e0ae95a">&#9670;&nbsp;</a></span>check_output_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool check_output_data </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>output_file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ddr_data_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>data_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>model_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zeus__operator_8h.html#a10bfa92e6a552ac99f640e1ffe9775b4">DATA_PARAM</a>&#160;</td>
+          <td class="paramname"><em>data_param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_a99a4f12c87dbcbe5a797107d6e0ae95a_cgraph.png" border="0" usemap="#utils_8h_a99a4f12c87dbcbe5a797107d6e0ae95a_cgraph" alt=""/></div>
+<map name="utils_8h_a99a4f12c87dbcbe5a797107d6e0ae95a_cgraph" id="utils_8h_a99a4f12c87dbcbe5a797107d6e0ae95a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,188,151,215"/>
+<area shape="rect" href="zeus__operator_8c.html#a9562c1687fe0b20ee2a19d0a0d1c314b" title=" " alt="" coords="199,71,372,113"/>
+<area shape="rect" href="utils_8c.html#a7aea466b596d37ccf10b87dddcaa0d30" title=" " alt="" coords="232,137,339,164"/>
+<area shape="rect" href="utils_8c.html#aead9eb939dcd991cbe197f508534cf49" title=" " alt="" coords="228,188,343,215"/>
+<area shape="rect" href="utils_8c.html#a802be4af1b2d3cc2cbfe6d360224e933" title=" " alt="" coords="220,239,351,265"/>
+<area shape="rect" href="utils_8c.html#a4a96b4c30bdca59921bdc8bfd5c8b456" title=" " alt="" coords="222,289,349,316"/>
+<area shape="rect" href="utils_8c.html#a63454af91acf70c90a7b2adfbf3f50de" title=" " alt="" coords="448,122,611,163"/>
+<area shape="rect" href="utils_8c.html#a4d48b0f7e3ca20eff3b389b9b84e9f5d" title=" " alt="" coords="420,188,639,215"/>
+<area shape="rect" href="utils_8c.html#accfe6e096382af4330a932baaaee449a" title=" " alt="" coords="715,5,826,32"/>
+<area shape="rect" href="ddr__info_8c.html#ae3f9786399868cb64fcc690b03765139" title=" " alt="" coords="687,57,855,98"/>
+<area shape="rect" href="ddr__info_8c.html#ae648785585cbde48d7be1db00a9ab3d5" title=" " alt="" coords="687,122,855,163"/>
+<area shape="rect" href="utils_8c.html#acbb54dd701d7b208b448cee900ea961f" title=" " alt="" coords="903,5,992,32"/>
+<area shape="rect" href="neon__memcpy_8c.html#adb86c863ba8460aafd65378e6d611c72" title=" " alt="" coords="711,188,830,215"/>
+<area shape="rect" href="utils_8c.html#a97d5ffdf8ccaa378698c1937a1f336cc" title=" " alt="" coords="476,239,583,265"/>
+<area shape="rect" href="utils_8c.html#a187b1b77bf012032194a65fbf97bfd51" title=" " alt="" coords="711,239,830,265"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a94a7b1cb12f109914fe5cf8fa11f3197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94a7b1cb12f109914fe5cf8fa11f3197">&#9670;&nbsp;</a></span>fill_output_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fill_output_data </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>data_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_a94a7b1cb12f109914fe5cf8fa11f3197_cgraph.png" border="0" usemap="#utils_8h_a94a7b1cb12f109914fe5cf8fa11f3197_cgraph" alt=""/></div>
+<map name="utils_8h_a94a7b1cb12f109914fe5cf8fa11f3197_cgraph" id="utils_8h_a94a7b1cb12f109914fe5cf8fa11f3197_cgraph">
+<area shape="rect" title=" " alt="" coords="5,78,128,105"/>
+<area shape="rect" href="utils_8c.html#aa02887d7b9deb9c0ae4bcb6d30ab02db" title=" " alt="" coords="176,78,315,105"/>
+<area shape="rect" href="utils_8c.html#a44a3e86963745ea5fc7e28e3816b1f42" title=" " alt="" coords="377,5,543,47"/>
+<area shape="rect" href="ddr__info_8c.html#ae648785585cbde48d7be1db00a9ab3d5" title=" " alt="" coords="376,71,544,112"/>
+<area shape="rect" href="utils_8c.html#aefe7dd717cbaf3fa4377cb6cbf988232" title=" " alt="" coords="363,136,557,177"/>
+<area shape="rect" href="ddr__info_8c.html#aec0da130117afaa6982a2179fa7f9f20" title=" " alt="" coords="605,5,773,47"/>
+<area shape="rect" href="neon__memcpy_8c.html#adb86c863ba8460aafd65378e6d611c72" title=" " alt="" coords="630,107,749,134"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7aea466b596d37ccf10b87dddcaa0d30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aea466b596d37ccf10b87dddcaa0d30">&#9670;&nbsp;</a></span>get_file_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t* get_file_data </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>data_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_a7aea466b596d37ccf10b87dddcaa0d30_icgraph.png" border="0" usemap="#utils_8h_a7aea466b596d37ccf10b87dddcaa0d30_icgraph" alt=""/></div>
+<map name="utils_8h_a7aea466b596d37ccf10b87dddcaa0d30_icgraph" id="utils_8h_a7aea466b596d37ccf10b87dddcaa0d30_icgraph">
+<area shape="rect" title=" " alt="" coords="239,64,345,91"/>
+<area shape="rect" href="utils_8h.html#a99a4f12c87dbcbe5a797107d6e0ae95a" title=" " alt="" coords="25,5,171,32"/>
+<area shape="rect" href="classcamera_1_1YoloV8sDetector.html#ad7b6d9847609f61d244396da55d57fef" title="对输入图像进行 YOLOv8 检测" alt="" coords="5,57,191,98"/>
+<area shape="rect" href="utils_8h.html#a489eb517328b38e77957a3d3f70d03b6" title=" " alt="" coords="33,123,163,149"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6d498a0a468bfab3973296fbf6af7b6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d498a0a468bfab3973296fbf6af7b6f">&#9670;&nbsp;</a></span>GetFileSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t GetFileSize </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_a6d498a0a468bfab3973296fbf6af7b6f_icgraph.png" border="0" usemap="#utils_8h_a6d498a0a468bfab3973296fbf6af7b6f_icgraph" alt=""/></div>
+<map name="utils_8h_a6d498a0a468bfab3973296fbf6af7b6f_icgraph" id="utils_8h_a6d498a0a468bfab3973296fbf6af7b6f_icgraph">
+<area shape="rect" title=" " alt="" coords="239,13,333,39"/>
+<area shape="rect" href="classcamera_1_1YoloV8sDetector.html#ad7b6d9847609f61d244396da55d57fef" title="对输入图像进行 YOLOv8 检测" alt="" coords="5,5,191,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a40bab8c5941421f3d2e744fe64ff73c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40bab8c5941421f3d2e744fe64ff73c3">&#9670;&nbsp;</a></span>my_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void my_free </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t ***&#160;</td>
+          <td class="paramname"><em>in_file_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>in_file_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aead9eb939dcd991cbe197f508534cf49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aead9eb939dcd991cbe197f508534cf49">&#9670;&nbsp;</a></span>read_ddr_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool read_ddr_data </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>read_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>data_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_aead9eb939dcd991cbe197f508534cf49_cgraph.png" border="0" usemap="#utils_8h_aead9eb939dcd991cbe197f508534cf49_cgraph" alt=""/></div>
+<map name="utils_8h_aead9eb939dcd991cbe197f508534cf49_cgraph" id="utils_8h_aead9eb939dcd991cbe197f508534cf49_cgraph">
+<area shape="rect" title=" " alt="" coords="5,127,120,153"/>
+<area shape="rect" href="utils_8c.html#a63454af91acf70c90a7b2adfbf3f50de" title=" " alt="" coords="196,90,359,131"/>
+<area shape="rect" href="utils_8c.html#a4d48b0f7e3ca20eff3b389b9b84e9f5d" title=" " alt="" coords="168,156,387,183"/>
+<area shape="rect" href="utils_8c.html#accfe6e096382af4330a932baaaee449a" title=" " alt="" coords="463,5,574,32"/>
+<area shape="rect" href="ddr__info_8c.html#ae3f9786399868cb64fcc690b03765139" title=" " alt="" coords="435,57,603,98"/>
+<area shape="rect" href="ddr__info_8c.html#ae648785585cbde48d7be1db00a9ab3d5" title=" " alt="" coords="435,122,603,163"/>
+<area shape="rect" href="utils_8c.html#acbb54dd701d7b208b448cee900ea961f" title=" " alt="" coords="651,5,740,32"/>
+<area shape="rect" href="neon__memcpy_8c.html#adb86c863ba8460aafd65378e6d611c72" title=" " alt="" coords="459,188,578,215"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_aead9eb939dcd991cbe197f508534cf49_icgraph.png" border="0" usemap="#utils_8h_aead9eb939dcd991cbe197f508534cf49_icgraph" alt=""/></div>
+<map name="utils_8h_aead9eb939dcd991cbe197f508534cf49_icgraph" id="utils_8h_aead9eb939dcd991cbe197f508534cf49_icgraph">
+<area shape="rect" title=" " alt="" coords="233,56,348,83"/>
+<area shape="rect" href="utils_8h.html#a99a4f12c87dbcbe5a797107d6e0ae95a" title=" " alt="" coords="23,5,168,32"/>
+<area shape="rect" href="utils_8h.html#aae15631f5e08621b3294a3e93a6d05eb" title=" " alt="" coords="14,56,177,83"/>
+<area shape="rect" href="utils_8h.html#a7fc7b5d82e78f2ecbb62c65daf2a276a" title=" " alt="" coords="5,107,185,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aae15631f5e08621b3294a3e93a6d05eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae15631f5e08621b3294a3e93a6d05eb">&#9670;&nbsp;</a></span>read_ddr_data_to_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool read_ddr_data_to_file </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>data_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zeus__operator_8h.html#a10bfa92e6a552ac99f640e1ffe9775b4">DATA_PARAM</a>&#160;</td>
+          <td class="paramname"><em>data_param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_aae15631f5e08621b3294a3e93a6d05eb_cgraph.png" border="0" usemap="#utils_8h_aae15631f5e08621b3294a3e93a6d05eb_cgraph" alt=""/></div>
+<map name="utils_8h_aae15631f5e08621b3294a3e93a6d05eb_cgraph" id="utils_8h_aae15631f5e08621b3294a3e93a6d05eb_cgraph">
+<area shape="rect" title=" " alt="" coords="5,97,168,124"/>
+<area shape="rect" href="zeus__operator_8c.html#a9562c1687fe0b20ee2a19d0a0d1c314b" title=" " alt="" coords="216,61,389,102"/>
+<area shape="rect" href="utils_8c.html#aead9eb939dcd991cbe197f508534cf49" title=" " alt="" coords="245,127,360,153"/>
+<area shape="rect" href="utils_8c.html#a63454af91acf70c90a7b2adfbf3f50de" title=" " alt="" coords="465,90,628,131"/>
+<area shape="rect" href="utils_8c.html#a4d48b0f7e3ca20eff3b389b9b84e9f5d" title=" " alt="" coords="437,156,656,183"/>
+<area shape="rect" href="utils_8c.html#accfe6e096382af4330a932baaaee449a" title=" " alt="" coords="733,5,843,32"/>
+<area shape="rect" href="ddr__info_8c.html#ae3f9786399868cb64fcc690b03765139" title=" " alt="" coords="704,57,872,98"/>
+<area shape="rect" href="ddr__info_8c.html#ae648785585cbde48d7be1db00a9ab3d5" title=" " alt="" coords="704,122,872,163"/>
+<area shape="rect" href="utils_8c.html#acbb54dd701d7b208b448cee900ea961f" title=" " alt="" coords="920,5,1009,32"/>
+<area shape="rect" href="neon__memcpy_8c.html#adb86c863ba8460aafd65378e6d611c72" title=" " alt="" coords="729,188,847,215"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7fc7b5d82e78f2ecbb62c65daf2a276a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fc7b5d82e78f2ecbb62c65daf2a276a">&#9670;&nbsp;</a></span>read_larger_model_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool read_larger_model_data </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>read_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>data_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_a7fc7b5d82e78f2ecbb62c65daf2a276a_cgraph.png" border="0" usemap="#utils_8h_a7fc7b5d82e78f2ecbb62c65daf2a276a_cgraph" alt=""/></div>
+<map name="utils_8h_a7fc7b5d82e78f2ecbb62c65daf2a276a_cgraph" id="utils_8h_a7fc7b5d82e78f2ecbb62c65daf2a276a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,127,185,153"/>
+<area shape="rect" href="utils_8c.html#aead9eb939dcd991cbe197f508534cf49" title=" " alt="" coords="233,127,348,153"/>
+<area shape="rect" href="utils_8c.html#a63454af91acf70c90a7b2adfbf3f50de" title=" " alt="" coords="424,90,587,131"/>
+<area shape="rect" href="utils_8c.html#a4d48b0f7e3ca20eff3b389b9b84e9f5d" title=" " alt="" coords="396,156,615,183"/>
+<area shape="rect" href="utils_8c.html#accfe6e096382af4330a932baaaee449a" title=" " alt="" coords="691,5,802,32"/>
+<area shape="rect" href="ddr__info_8c.html#ae3f9786399868cb64fcc690b03765139" title=" " alt="" coords="663,57,831,98"/>
+<area shape="rect" href="ddr__info_8c.html#ae648785585cbde48d7be1db00a9ab3d5" title=" " alt="" coords="663,122,831,163"/>
+<area shape="rect" href="utils_8c.html#acbb54dd701d7b208b448cee900ea961f" title=" " alt="" coords="879,5,968,32"/>
+<area shape="rect" href="neon__memcpy_8c.html#adb86c863ba8460aafd65378e6d611c72" title=" " alt="" coords="687,188,806,215"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a802be4af1b2d3cc2cbfe6d360224e933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a802be4af1b2d3cc2cbfe6d360224e933">&#9670;&nbsp;</a></span>verify_fp16_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool verify_fp16_data </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>true_nchw_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>ddr_nchw_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>data_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_a802be4af1b2d3cc2cbfe6d360224e933_cgraph.png" border="0" usemap="#utils_8h_a802be4af1b2d3cc2cbfe6d360224e933_cgraph" alt=""/></div>
+<map name="utils_8h_a802be4af1b2d3cc2cbfe6d360224e933_cgraph" id="utils_8h_a802be4af1b2d3cc2cbfe6d360224e933_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,136,32"/>
+<area shape="rect" href="utils_8c.html#a97d5ffdf8ccaa378698c1937a1f336cc" title=" " alt="" coords="184,5,291,32"/>
+<area shape="rect" href="utils_8c.html#a187b1b77bf012032194a65fbf97bfd51" title=" " alt="" coords="339,5,457,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_a802be4af1b2d3cc2cbfe6d360224e933_icgraph.png" border="0" usemap="#utils_8h_a802be4af1b2d3cc2cbfe6d360224e933_icgraph" alt=""/></div>
+<map name="utils_8h_a802be4af1b2d3cc2cbfe6d360224e933_icgraph" id="utils_8h_a802be4af1b2d3cc2cbfe6d360224e933_icgraph">
+<area shape="rect" title=" " alt="" coords="199,5,329,32"/>
+<area shape="rect" href="utils_8h.html#a99a4f12c87dbcbe5a797107d6e0ae95a" title=" " alt="" coords="5,5,151,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4a96b4c30bdca59921bdc8bfd5c8b456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a96b4c30bdca59921bdc8bfd5c8b456">&#9670;&nbsp;</a></span>verify_int8_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool verify_int8_data </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>true_nchw_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>ddr_nchw_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>data_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_a4a96b4c30bdca59921bdc8bfd5c8b456_icgraph.png" border="0" usemap="#utils_8h_a4a96b4c30bdca59921bdc8bfd5c8b456_icgraph" alt=""/></div>
+<map name="utils_8h_a4a96b4c30bdca59921bdc8bfd5c8b456_icgraph" id="utils_8h_a4a96b4c30bdca59921bdc8bfd5c8b456_icgraph">
+<area shape="rect" title=" " alt="" coords="199,5,325,32"/>
+<area shape="rect" href="utils_8h.html#a99a4f12c87dbcbe5a797107d6e0ae95a" title=" " alt="" coords="5,5,151,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa02887d7b9deb9c0ae4bcb6d30ab02db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa02887d7b9deb9c0ae4bcb6d30ab02db">&#9670;&nbsp;</a></span>write_data_to_ddr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool write_data_to_ddr </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>write_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>data_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>verify_flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_aa02887d7b9deb9c0ae4bcb6d30ab02db_cgraph.png" border="0" usemap="#utils_8h_aa02887d7b9deb9c0ae4bcb6d30ab02db_cgraph" alt=""/></div>
+<map name="utils_8h_aa02887d7b9deb9c0ae4bcb6d30ab02db_cgraph" id="utils_8h_aa02887d7b9deb9c0ae4bcb6d30ab02db_cgraph">
+<area shape="rect" title=" " alt="" coords="5,78,144,105"/>
+<area shape="rect" href="utils_8c.html#a44a3e86963745ea5fc7e28e3816b1f42" title=" " alt="" coords="206,5,373,47"/>
+<area shape="rect" href="ddr__info_8c.html#ae648785585cbde48d7be1db00a9ab3d5" title=" " alt="" coords="205,71,373,112"/>
+<area shape="rect" href="utils_8c.html#aefe7dd717cbaf3fa4377cb6cbf988232" title=" " alt="" coords="192,136,387,177"/>
+<area shape="rect" href="ddr__info_8c.html#aec0da130117afaa6982a2179fa7f9f20" title=" " alt="" coords="435,5,603,47"/>
+<area shape="rect" href="neon__memcpy_8c.html#adb86c863ba8460aafd65378e6d611c72" title=" " alt="" coords="459,107,578,134"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_aa02887d7b9deb9c0ae4bcb6d30ab02db_icgraph.png" border="0" usemap="#utils_8h_aa02887d7b9deb9c0ae4bcb6d30ab02db_icgraph" alt=""/></div>
+<map name="utils_8h_aa02887d7b9deb9c0ae4bcb6d30ab02db_icgraph" id="utils_8h_aa02887d7b9deb9c0ae4bcb6d30ab02db_icgraph">
+<area shape="rect" title=" " alt="" coords="237,56,376,83"/>
+<area shape="rect" href="utils_8h.html#a94a7b1cb12f109914fe5cf8fa11f3197" title=" " alt="" coords="36,5,159,32"/>
+<area shape="rect" href="utils_8h.html#a489eb517328b38e77957a3d3f70d03b6" title=" " alt="" coords="32,56,163,83"/>
+<area shape="rect" href="utils_8h.html#a7b5745115edc7c29e6144d3c958a1cbf" title=" " alt="" coords="5,107,189,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a489eb517328b38e77957a3d3f70d03b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a489eb517328b38e77957a3d3f70d03b6">&#9670;&nbsp;</a></span>write_file_to_ddr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool write_file_to_ddr </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>data_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>verify_flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_a489eb517328b38e77957a3d3f70d03b6_cgraph.png" border="0" usemap="#utils_8h_a489eb517328b38e77957a3d3f70d03b6_cgraph" alt=""/></div>
+<map name="utils_8h_a489eb517328b38e77957a3d3f70d03b6_cgraph" id="utils_8h_a489eb517328b38e77957a3d3f70d03b6_cgraph">
+<area shape="rect" title=" " alt="" coords="5,53,136,79"/>
+<area shape="rect" href="utils_8c.html#a7aea466b596d37ccf10b87dddcaa0d30" title=" " alt="" coords="200,27,307,54"/>
+<area shape="rect" href="utils_8c.html#aa02887d7b9deb9c0ae4bcb6d30ab02db" title=" " alt="" coords="184,78,323,105"/>
+<area shape="rect" href="utils_8c.html#a44a3e86963745ea5fc7e28e3816b1f42" title=" " alt="" coords="385,5,551,47"/>
+<area shape="rect" href="ddr__info_8c.html#ae648785585cbde48d7be1db00a9ab3d5" title=" " alt="" coords="384,71,552,112"/>
+<area shape="rect" href="utils_8c.html#aefe7dd717cbaf3fa4377cb6cbf988232" title=" " alt="" coords="371,136,565,177"/>
+<area shape="rect" href="ddr__info_8c.html#aec0da130117afaa6982a2179fa7f9f20" title=" " alt="" coords="613,5,781,47"/>
+<area shape="rect" href="neon__memcpy_8c.html#adb86c863ba8460aafd65378e6d611c72" title=" " alt="" coords="638,107,757,134"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7b5745115edc7c29e6144d3c958a1cbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b5745115edc7c29e6144d3c958a1cbf">&#9670;&nbsp;</a></span>write_larger_model_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool write_larger_model_data </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>data_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>verify_flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_a7b5745115edc7c29e6144d3c958a1cbf_cgraph.png" border="0" usemap="#utils_8h_a7b5745115edc7c29e6144d3c958a1cbf_cgraph" alt=""/></div>
+<map name="utils_8h_a7b5745115edc7c29e6144d3c958a1cbf_cgraph" id="utils_8h_a7b5745115edc7c29e6144d3c958a1cbf_cgraph">
+<area shape="rect" title=" " alt="" coords="5,78,189,105"/>
+<area shape="rect" href="utils_8c.html#aa02887d7b9deb9c0ae4bcb6d30ab02db" title=" " alt="" coords="237,78,376,105"/>
+<area shape="rect" href="utils_8c.html#a44a3e86963745ea5fc7e28e3816b1f42" title=" " alt="" coords="438,5,605,47"/>
+<area shape="rect" href="ddr__info_8c.html#ae648785585cbde48d7be1db00a9ab3d5" title=" " alt="" coords="437,71,605,112"/>
+<area shape="rect" href="utils_8c.html#aefe7dd717cbaf3fa4377cb6cbf988232" title=" " alt="" coords="424,136,619,177"/>
+<area shape="rect" href="ddr__info_8c.html#aec0da130117afaa6982a2179fa7f9f20" title=" " alt="" coords="667,5,835,47"/>
+<area shape="rect" href="neon__memcpy_8c.html#adb86c863ba8460aafd65378e6d611c72" title=" " alt="" coords="691,107,810,134"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
