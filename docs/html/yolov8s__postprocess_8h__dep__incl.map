@@ -1,5 +1,0 @@
-<map id="yolov8s/yolov8s_postprocess.h" name="yolov8s/yolov8s_postprocess.h">
-<area shape="rect" id="node1" title="图像后处理类，用于 YOLOv8 模型输出" alt="" coords="117,5,343,32"/>
-<area shape="rect" id="node2" href="$yolov8s__detector_8cc.html" title=" " alt="" coords="5,80,212,107"/>
-<area shape="rect" id="node3" href="$yolov8s__postprocess_8cc.html" title=" " alt="" coords="236,80,467,107"/>
-</map>

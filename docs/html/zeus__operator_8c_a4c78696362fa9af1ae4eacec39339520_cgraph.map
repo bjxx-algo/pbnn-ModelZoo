@@ -1,6 +1,0 @@
-<map id="init_npu" name="init_npu">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,80,83"/>
-<area shape="rect" id="node2" href="$spi__ctrl_8c.html#a363842db03e5a6c616033de4616aa447" title=" " alt="" coords="165,5,235,32"/>
-<area shape="rect" id="node3" href="$935__reg__ctrl_8c.html#a2b6ec2413aecba1019750e10eab45216" title=" " alt="" coords="128,56,272,83"/>
-<area shape="rect" id="node4" href="$ddr__info_8c.html#a89abee82cdb65d2c360c06c0074298fc" title=" " alt="" coords="150,107,250,133"/>
-</map>

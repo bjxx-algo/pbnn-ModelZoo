@@ -1,4 +1,0 @@
-<map id="camera::preprocess" name="camera::preprocess">
-<area shape="rect" id="node1" title="对输入图像进行预处理，返回 Torch 张量" alt="" coords="239,13,389,39"/>
-<area shape="rect" id="node2" href="$classcamera_1_1YoloV8sDetector.html#af95dedbb1301a3808f56b9d3d592f0b3" title="对输入图像执行手势检测" alt="" coords="5,5,191,47"/>
-</map>
