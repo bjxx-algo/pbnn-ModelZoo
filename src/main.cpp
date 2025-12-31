@@ -16,9 +16,9 @@ void yolov8s_det(std::string model_path){
 
     //preprocess
     std::cout << "Running preprocess..." << std::endl;
-    yolov8sPreprocess pre = yolov8sPreprocess();
+    std::shared_ptr<yolov8sPreprocess> preprocessor = std::make_shared<yolov8sPreprocess>();
     cv::Mat img = cv::imread(image_path, cv::IMREAD_COLOR);
-    torch::Tensor img_tensor = pre.preprocess(img, 640);
+    torch::Tensor img_tensor = preprocessor->preprocess(img, 640);
     std::cout << "Preprocess OK." << std::endl;
 
     //infer
@@ -38,8 +38,7 @@ void yolov8s_det(std::string model_path){
     model.execute();
     auto ret = model.output();
     auto result = std::get<CnnChatCompletions>(ret);
-    std::cout << "execute OK." << std::endl;
-
+    std::cout << "Execute OK." << std::endl;
 
     //postprocess
     std::cout << "Running postprocess..." << std::endl;
