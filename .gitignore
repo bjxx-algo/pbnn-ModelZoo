@@ -1,0 +1,24 @@
+# build
+build/
+cmake-build-*/
+*.o
+*.so
+*.a
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# data / model
+data/
+*.onnx
+*.pt
+*.pbnn
+
+# logs
+logs/
+
+# system
+.DS_Store

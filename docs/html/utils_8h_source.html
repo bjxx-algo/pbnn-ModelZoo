@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Myolov8_pose_demo: driver_adapter/utils/utils.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Myolov8_pose_demo
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ef67e9edbecde6debc60c19945de0902.html">driver_adapter</a></li><li class="navelem"><a class="el" href="dir_68f0be0e7fb504eb5e1c44eed522a7a0.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">utils.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="utils_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __UTILS_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __UTILS_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="zeus__operator_8h.html">driver_adapter/zeus_operator.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;int64_t <a class="code" href="utils_8h.html#a6d498a0a468bfab3973296fbf6af7b6f">GetFileSize</a>(uint8_t *filename);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;uint8_t *<a class="code" href="utils_8h.html#a7aea466b596d37ccf10b87dddcaa0d30">get_file_data</a>(uint8_t *file_name, uint32_t data_len);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="utils_8h.html#aead9eb939dcd991cbe197f508534cf49">read_ddr_data</a>(uint8_t *read_data, <span class="keywordtype">void</span> *<a class="code" href="structdata__addr.html">data_addr</a>, uint32_t data_len);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="utils_8h.html#aa02887d7b9deb9c0ae4bcb6d30ab02db">write_data_to_ddr</a>(uint8_t *write_data, <span class="keywordtype">void</span> *<a class="code" href="structdata__addr.html">data_addr</a>, uint32_t data_len, uint32_t verify_flag, uint8_t *data_name);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="utils_8h.html#a489eb517328b38e77957a3d3f70d03b6">write_file_to_ddr</a>(uint8_t *file_name, <span class="keywordtype">void</span> *<a class="code" href="structdata__addr.html">data_addr</a>, uint32_t data_len, uint8_t *data_name, <span class="keywordtype">int</span> verify_flag);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="utils_8h.html#aae15631f5e08621b3294a3e93a6d05eb">read_ddr_data_to_file</a>(uint8_t *file_name, <span class="keywordtype">void</span> *<a class="code" href="structdata__addr.html">data_addr</a>, uint32_t data_len, <a class="code" href="structBIN__DATA__PARAM.html">DATA_PARAM</a> data_param);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#a94a7b1cb12f109914fe5cf8fa11f3197">fill_output_data</a>(<span class="keywordtype">void</span> *<a class="code" href="structdata__addr.html">data_addr</a>, uint32_t data_len);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#a40bab8c5941421f3d2e744fe64ff73c3">my_free</a>(uint8_t ***in_file_path, uint32_t in_file_size);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="utils_8h.html#a4a96b4c30bdca59921bdc8bfd5c8b456">verify_int8_data</a>(uint8_t *true_nchw_data, uint8_t *ddr_nchw_data, uint32_t data_len);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="utils_8h.html#a802be4af1b2d3cc2cbfe6d360224e933">verify_fp16_data</a>(uint8_t *true_nchw_data, uint8_t *ddr_nchw_data, uint32_t data_len);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="utils_8h.html#a99a4f12c87dbcbe5a797107d6e0ae95a">check_output_data</a>(uint8_t *output_file, <span class="keywordtype">void</span> *ddr_data_addr, uint32_t data_len, uint8_t *model_name, <a class="code" href="structBIN__DATA__PARAM.html">DATA_PARAM</a> data_param);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="utils_8h.html#a7b5745115edc7c29e6144d3c958a1cbf">write_larger_model_data</a>(uint8_t *data, <span class="keywordtype">void</span> *<a class="code" href="structdata__addr.html">data_addr</a>, uint32_t data_len, uint32_t verify_flag, uint8_t *data_name);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="utils_8h.html#a7fc7b5d82e78f2ecbb62c65daf2a276a">read_larger_model_data</a>(uint8_t *read_data, <span class="keywordtype">void</span> *<a class="code" href="structdata__addr.html">data_addr</a>, uint32_t data_len);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="autils_8c_html_a4d48b0f7e3ca20eff3b389b9b84e9f5d"><div class="ttname"><a href="utils_8c.html#a4d48b0f7e3ca20eff3b389b9b84e9f5d">norm_memory_read_ddr_data</a></div><div class="ttdeci">bool norm_memory_read_ddr_data(uint8_t *read_data, void *data_addr, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:195</div></div>
+<div class="ttc" id="autils_8c_html_a931b90e59e9be4de26d13e758811b77a"><div class="ttname"><a href="utils_8c.html#a931b90e59e9be4de26d13e758811b77a">npu_ddr2_base</a></div><div class="ttdeci">void * npu_ddr2_base</div><div class="ttdef"><b>Definition:</b> ddr_info.c:14</div></div>
+<div class="ttc" id="autils_8c_html_a7aea466b596d37ccf10b87dddcaa0d30"><div class="ttname"><a href="utils_8c.html#a7aea466b596d37ccf10b87dddcaa0d30">get_file_data</a></div><div class="ttdeci">uint8_t * get_file_data(uint8_t *file_name, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:33</div></div>
+<div class="ttc" id="astructDATA__INFO_html_a0935cddfd118c2b9ef33ce0096285eff"><div class="ttname"><a href="structDATA__INFO.html#a0935cddfd118c2b9ef33ce0096285eff">DATA_INFO::tail_data_count</a></div><div class="ttdeci">uint32_t tail_data_count</div><div class="ttdef"><b>Definition:</b> utils.c:10</div></div>
+<div class="ttc" id="autils_8c_html_af55df1cde73d2fbc6ea389adee687492"><div class="ttname"><a href="utils_8c.html#af55df1cde73d2fbc6ea389adee687492">DATA_ALIGN</a></div><div class="ttdeci">#define DATA_ALIGN</div><div class="ttdef"><b>Definition:</b> utils.c:140</div></div>
+<div class="ttc" id="autils_8h_html_aae15631f5e08621b3294a3e93a6d05eb"><div class="ttname"><a href="utils_8h.html#aae15631f5e08621b3294a3e93a6d05eb">read_ddr_data_to_file</a></div><div class="ttdeci">bool read_ddr_data_to_file(uint8_t *file_name, void *data_addr, uint32_t data_len, DATA_PARAM data_param)</div><div class="ttdef"><b>Definition:</b> utils.c:287</div></div>
+<div class="ttc" id="autils_8c_html_a489eb517328b38e77957a3d3f70d03b6"><div class="ttname"><a href="utils_8c.html#a489eb517328b38e77957a3d3f70d03b6">write_file_to_ddr</a></div><div class="ttdeci">bool write_file_to_ddr(uint8_t *file_name, void *data_addr, uint32_t data_len, uint8_t *data_name, int verify_flag)</div><div class="ttdef"><b>Definition:</b> utils.c:271</div></div>
+<div class="ttc" id="azeus__operator_8h_html"><div class="ttname"><a href="zeus__operator_8h.html">zeus_operator.h</a></div></div>
+<div class="ttc" id="autils_8c_html_acbb54dd701d7b208b448cee900ea961f"><div class="ttname"><a href="utils_8c.html#acbb54dd701d7b208b448cee900ea961f">get_in_list</a></div><div class="ttdeci">bool get_in_list(uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:64</div></div>
+<div class="ttc" id="astructDATA__INFO_html_adbeabfc93cf9cf214eacaaa32726ddb1"><div class="ttname"><a href="structDATA__INFO.html#adbeabfc93cf9cf214eacaaa32726ddb1">DATA_INFO::head_data_count</a></div><div class="ttdeci">uint32_t head_data_count</div><div class="ttdef"><b>Definition:</b> utils.c:8</div></div>
+<div class="ttc" id="addr__info_8h_html"><div class="ttname"><a href="ddr__info_8h.html">ddr_info.h</a></div></div>
+<div class="ttc" id="autils_8c_html_aa02887d7b9deb9c0ae4bcb6d30ab02db"><div class="ttname"><a href="utils_8c.html#aa02887d7b9deb9c0ae4bcb6d30ab02db">write_data_to_ddr</a></div><div class="ttdeci">bool write_data_to_ddr(uint8_t *write_data, void *data_addr, uint32_t data_len, uint32_t verify_flag, uint8_t *data_name)</div><div class="ttdef"><b>Definition:</b> utils.c:234</div></div>
+<div class="ttc" id="autils_8c_html_a67e4118c5c41d9df42b203576324fecb"><div class="ttname"><a href="utils_8c.html#a67e4118c5c41d9df42b203576324fecb">npu_ddr1_base</a></div><div class="ttdeci">void * npu_ddr1_base</div><div class="ttdef"><b>Definition:</b> ddr_info.c:13</div></div>
+<div class="ttc" id="autils_8h_html_a40bab8c5941421f3d2e744fe64ff73c3"><div class="ttname"><a href="utils_8h.html#a40bab8c5941421f3d2e744fe64ff73c3">my_free</a></div><div class="ttdeci">void my_free(uint8_t ***in_file_path, uint32_t in_file_size)</div><div class="ttdef"><b>Definition:</b> utils.c:553</div></div>
+<div class="ttc" id="aneon__memcpy_8h_html"><div class="ttname"><a href="neon__memcpy_8h.html">neon_memcpy.h</a></div></div>
+<div class="ttc" id="autils_8c_html_a7fc7b5d82e78f2ecbb62c65daf2a276a"><div class="ttname"><a href="utils_8c.html#a7fc7b5d82e78f2ecbb62c65daf2a276a">read_larger_model_data</a></div><div class="ttdeci">bool read_larger_model_data(uint8_t *read_data, void *data_addr, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:332</div></div>
+<div class="ttc" id="autils_8c_html_a97d5ffdf8ccaa378698c1937a1f336cc"><div class="ttname"><a href="utils_8c.html#a97d5ffdf8ccaa378698c1937a1f336cc">fp16_to_fp64</a></div><div class="ttdeci">double fp16_to_fp64(uint16_t binaryValue)</div><div class="ttdef"><b>Definition:</b> utils.c:363</div></div>
+<div class="ttc" id="autils_8c_html_aefe7dd717cbaf3fa4377cb6cbf988232"><div class="ttname"><a href="utils_8c.html#aefe7dd717cbaf3fa4377cb6cbf988232">norm_memory_write_data_to_ddr</a></div><div class="ttdeci">bool norm_memory_write_data_to_ddr(uint8_t *write_data, void *data_addr, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:206</div></div>
+<div class="ttc" id="autils_8c_html_a802be4af1b2d3cc2cbfe6d360224e933"><div class="ttname"><a href="utils_8c.html#a802be4af1b2d3cc2cbfe6d360224e933">verify_fp16_data</a></div><div class="ttdeci">bool verify_fp16_data(uint8_t *true_nchw_data, uint8_t *ddr_nchw_data, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:372</div></div>
+<div class="ttc" id="autils_8h_html_a489eb517328b38e77957a3d3f70d03b6"><div class="ttname"><a href="utils_8h.html#a489eb517328b38e77957a3d3f70d03b6">write_file_to_ddr</a></div><div class="ttdeci">bool write_file_to_ddr(uint8_t *file_name, void *data_addr, uint32_t data_len, uint8_t *data_name, int verify_flag)</div><div class="ttdef"><b>Definition:</b> utils.c:271</div></div>
+<div class="ttc" id="autils_8c_html_accfe6e096382af4330a932baaaee449a"><div class="ttname"><a href="utils_8c.html#accfe6e096382af4330a932baaaee449a">get_data_info</a></div><div class="ttdeci">DATA_INFO get_data_info(uint64_t ddr_addr, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:79</div></div>
+<div class="ttc" id="autils_8c_html_a002b2f4894492820fe708b1b7e7c5e70"><div class="ttname"><a href="utils_8c.html#a002b2f4894492820fe708b1b7e7c5e70">EPSILON</a></div><div class="ttdeci">#define EPSILON</div><div class="ttdef"><b>Definition:</b> utils.c:370</div></div>
+<div class="ttc" id="astructBIN__DATA__PARAM_html_aa9b75c1482b5767297745ba51ae2baca"><div class="ttname"><a href="structBIN__DATA__PARAM.html#aa9b75c1482b5767297745ba51ae2baca">BIN_DATA_PARAM::data_type</a></div><div class="ttdeci">uint32_t data_type</div><div class="ttdef"><b>Definition:</b> zeus_operator.h:31</div></div>
+<div class="ttc" id="autils_8h_html_aa02887d7b9deb9c0ae4bcb6d30ab02db"><div class="ttname"><a href="utils_8h.html#aa02887d7b9deb9c0ae4bcb6d30ab02db">write_data_to_ddr</a></div><div class="ttdeci">bool write_data_to_ddr(uint8_t *write_data, void *data_addr, uint32_t data_len, uint32_t verify_flag, uint8_t *data_name)</div><div class="ttdef"><b>Definition:</b> utils.c:234</div></div>
+<div class="ttc" id="autils_8c_html_af10f8eaf508e2aa362a1ba628f42a445"><div class="ttname"><a href="utils_8c.html#af10f8eaf508e2aa362a1ba628f42a445">write_larger_model_data</a></div><div class="ttdeci">bool write_larger_model_data(uint8_t *write_data, void *data_addr, uint32_t data_len, uint32_t verify_flag, uint8_t *data_name)</div><div class="ttdef"><b>Definition:</b> utils.c:339</div></div>
+<div class="ttc" id="autils_8c_html_aead9eb939dcd991cbe197f508534cf49"><div class="ttname"><a href="utils_8c.html#aead9eb939dcd991cbe197f508534cf49">read_ddr_data</a></div><div class="ttdeci">bool read_ddr_data(uint8_t *read_data, void *data_addr, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:218</div></div>
+<div class="ttc" id="autils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div></div>
+<div class="ttc" id="autils_8c_html_a187b1b77bf012032194a65fbf97bfd51"><div class="ttname"><a href="utils_8c.html#a187b1b77bf012032194a65fbf97bfd51">uint16_to_fp16</a></div><div class="ttdeci">_Float16 uint16_to_fp16(uint16_t bits)</div><div class="ttdef"><b>Definition:</b> utils.c:354</div></div>
+<div class="ttc" id="autils_8h_html_a99a4f12c87dbcbe5a797107d6e0ae95a"><div class="ttname"><a href="utils_8h.html#a99a4f12c87dbcbe5a797107d6e0ae95a">check_output_data</a></div><div class="ttdeci">bool check_output_data(uint8_t *output_file, void *ddr_data_addr, uint32_t data_len, uint8_t *model_name, DATA_PARAM data_param)</div><div class="ttdef"><b>Definition:</b> utils.c:516</div></div>
+<div class="ttc" id="autils_8c_html_a6d498a0a468bfab3973296fbf6af7b6f"><div class="ttname"><a href="utils_8c.html#a6d498a0a468bfab3973296fbf6af7b6f">GetFileSize</a></div><div class="ttdeci">int64_t GetFileSize(uint8_t *filename)</div><div class="ttdef"><b>Definition:</b> utils.c:14</div></div>
+<div class="ttc" id="autils_8c_html_aae15631f5e08621b3294a3e93a6d05eb"><div class="ttname"><a href="utils_8c.html#aae15631f5e08621b3294a3e93a6d05eb">read_ddr_data_to_file</a></div><div class="ttdeci">bool read_ddr_data_to_file(uint8_t *file_name, void *data_addr, uint32_t data_len, DATA_PARAM data_param)</div><div class="ttdef"><b>Definition:</b> utils.c:287</div></div>
+<div class="ttc" id="autils_8h_html_a7fc7b5d82e78f2ecbb62c65daf2a276a"><div class="ttname"><a href="utils_8h.html#a7fc7b5d82e78f2ecbb62c65daf2a276a">read_larger_model_data</a></div><div class="ttdeci">bool read_larger_model_data(uint8_t *read_data, void *data_addr, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:332</div></div>
+<div class="ttc" id="astructdata__addr_html"><div class="ttname"><a href="structdata__addr.html">data_addr</a></div><div class="ttdef"><b>Definition:</b> zeus_operator.h:34</div></div>
+<div class="ttc" id="autils_8c_html_a9c9618163705af713c86df79796b0211"><div class="ttname"><a href="utils_8c.html#a9c9618163705af713c86df79796b0211">verify_ddr_data</a></div><div class="ttdeci">uint32_t verify_ddr_data(uint64_t ddr_base_addr, uint8_t *result_data, uint32_t data_len, uint64_t ddr_addr)</div><div class="ttdef"><b>Definition:</b> utils.c:109</div></div>
+<div class="ttc" id="autils_8h_html_a4a96b4c30bdca59921bdc8bfd5c8b456"><div class="ttname"><a href="utils_8h.html#a4a96b4c30bdca59921bdc8bfd5c8b456">verify_int8_data</a></div><div class="ttdeci">bool verify_int8_data(uint8_t *true_nchw_data, uint8_t *ddr_nchw_data, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:443</div></div>
+<div class="ttc" id="addr__info_8c_html_a58e1d4315676c8dc125385aa9a493676"><div class="ttname"><a href="ddr__info_8c.html#a58e1d4315676c8dc125385aa9a493676">qm935_ddr_read_reg8</a></div><div class="ttdeci">uint8_t qm935_ddr_read_reg8(uint64_t ddr_base_addr, uint64_t data_addr)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:78</div></div>
+<div class="ttc" id="autils_8h_html_a94a7b1cb12f109914fe5cf8fa11f3197"><div class="ttname"><a href="utils_8h.html#a94a7b1cb12f109914fe5cf8fa11f3197">fill_output_data</a></div><div class="ttdeci">void fill_output_data(void *data_addr, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:320</div></div>
+<div class="ttc" id="astructDATA__INFO_html"><div class="ttname"><a href="structDATA__INFO.html">DATA_INFO</a></div><div class="ttdef"><b>Definition:</b> utils.c:7</div></div>
+<div class="ttc" id="astructBIN__DATA__PARAM_html"><div class="ttname"><a href="structBIN__DATA__PARAM.html">BIN_DATA_PARAM</a></div><div class="ttdef"><b>Definition:</b> zeus_operator.h:26</div></div>
+<div class="ttc" id="autils_8c_html_a99a4f12c87dbcbe5a797107d6e0ae95a"><div class="ttname"><a href="utils_8c.html#a99a4f12c87dbcbe5a797107d6e0ae95a">check_output_data</a></div><div class="ttdeci">bool check_output_data(uint8_t *output_file, void *ddr_data_addr, uint32_t data_len, uint8_t *model_name, DATA_PARAM data_param)</div><div class="ttdef"><b>Definition:</b> utils.c:516</div></div>
+<div class="ttc" id="azeus__operator_8h_html_a995ece644e32fe774514dede1f148a56a8d02dc1d00edc9f2ea809d79089720be"><div class="ttname"><a href="zeus__operator_8h.html#a995ece644e32fe774514dede1f148a56a8d02dc1d00edc9f2ea809d79089720be">TWO_BYTE</a></div><div class="ttdeci">@ TWO_BYTE</div><div class="ttdef"><b>Definition:</b> zeus_operator.h:21</div></div>
+<div class="ttc" id="autils_8h_html_a6d498a0a468bfab3973296fbf6af7b6f"><div class="ttname"><a href="utils_8h.html#a6d498a0a468bfab3973296fbf6af7b6f">GetFileSize</a></div><div class="ttdeci">int64_t GetFileSize(uint8_t *filename)</div><div class="ttdef"><b>Definition:</b> utils.c:14</div></div>
+<div class="ttc" id="aneon__memcpy_8c_html_adb86c863ba8460aafd65378e6d611c72"><div class="ttname"><a href="neon__memcpy_8c.html#adb86c863ba8460aafd65378e6d611c72">neon_memcpy</a></div><div class="ttdeci">void neon_memcpy(void *dst, const void *src, uint32_t size)</div><div class="ttdef"><b>Definition:</b> neon_memcpy.c:5</div></div>
+<div class="ttc" id="azeus__operator_8c_html_a9562c1687fe0b20ee2a19d0a0d1c314b"><div class="ttname"><a href="zeus__operator_8c.html#a9562c1687fe0b20ee2a19d0a0d1c314b">convert_nhwc_to_nchw_layout</a></div><div class="ttdeci">int convert_nhwc_to_nchw_layout(void *nhwc_data, void *nchw_data, uint32_t data_len, DATA_PARAM param)</div><div class="ttdef"><b>Definition:</b> zeus_operator.c:346</div></div>
+<div class="ttc" id="autils_8c_html_a40bab8c5941421f3d2e744fe64ff73c3"><div class="ttname"><a href="utils_8c.html#a40bab8c5941421f3d2e744fe64ff73c3">my_free</a></div><div class="ttdeci">void my_free(uint8_t ***in_file_path, uint32_t in_file_size)</div><div class="ttdef"><b>Definition:</b> utils.c:553</div></div>
+<div class="ttc" id="autils_8h_html_a7aea466b596d37ccf10b87dddcaa0d30"><div class="ttname"><a href="utils_8h.html#a7aea466b596d37ccf10b87dddcaa0d30">get_file_data</a></div><div class="ttdeci">uint8_t * get_file_data(uint8_t *file_name, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:33</div></div>
+<div class="ttc" id="autils_8c_html_a94a7b1cb12f109914fe5cf8fa11f3197"><div class="ttname"><a href="utils_8c.html#a94a7b1cb12f109914fe5cf8fa11f3197">fill_output_data</a></div><div class="ttdeci">void fill_output_data(void *data_addr, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:320</div></div>
+<div class="ttc" id="autils_8h_html_a7b5745115edc7c29e6144d3c958a1cbf"><div class="ttname"><a href="utils_8h.html#a7b5745115edc7c29e6144d3c958a1cbf">write_larger_model_data</a></div><div class="ttdeci">bool write_larger_model_data(uint8_t *data, void *data_addr, uint32_t data_len, uint32_t verify_flag, uint8_t *data_name)</div><div class="ttdef"><b>Definition:</b> utils.c:339</div></div>
+<div class="ttc" id="addr__info_8c_html_ae3f9786399868cb64fcc690b03765139"><div class="ttname"><a href="ddr__info_8c.html#ae3f9786399868cb64fcc690b03765139">larger_model_test_ddr_read_align_data</a></div><div class="ttdeci">void larger_model_test_ddr_read_align_data(void *data_addr, uint8_t *rdata, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:151</div></div>
+<div class="ttc" id="autils_8c_html_a44a3e86963745ea5fc7e28e3816b1f42"><div class="ttname"><a href="utils_8c.html#a44a3e86963745ea5fc7e28e3816b1f42">device_memory_write_data_to_ddr</a></div><div class="ttdeci">bool device_memory_write_data_to_ddr(uint8_t *write_data, void *data_addr, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:174</div></div>
+<div class="ttc" id="acJSON_8h_html_aff2566f4c366b48d73479bef43ee4d2e"><div class="ttname"><a href="cJSON_8h.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a></div><div class="ttdeci">char * buffer</div><div class="ttdef"><b>Definition:</b> cJSON.h:163</div></div>
+<div class="ttc" id="addr__info_8c_html_aec0da130117afaa6982a2179fa7f9f20"><div class="ttname"><a href="ddr__info_8c.html#aec0da130117afaa6982a2179fa7f9f20">larger_model_test_ddr_write_reg8</a></div><div class="ttdeci">void larger_model_test_ddr_write_reg8(void *data_addr, uint8_t wdata)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:156</div></div>
+<div class="ttc" id="autils_8h_html_a802be4af1b2d3cc2cbfe6d360224e933"><div class="ttname"><a href="utils_8h.html#a802be4af1b2d3cc2cbfe6d360224e933">verify_fp16_data</a></div><div class="ttdeci">bool verify_fp16_data(uint8_t *true_nchw_data, uint8_t *ddr_nchw_data, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:372</div></div>
+<div class="ttc" id="autils_8c_html_af34676c68475bd13963809df9c2d839b"><div class="ttname"><a href="utils_8c.html#af34676c68475bd13963809df9c2d839b">npu_ddr0_base</a></div><div class="ttdeci">void * npu_ddr0_base</div><div class="ttdef"><b>Definition:</b> ddr_info.c:12</div></div>
+<div class="ttc" id="azeus__operator_8h_html_a995ece644e32fe774514dede1f148a56ad64db552f8535933c4512e5f49a776e9"><div class="ttname"><a href="zeus__operator_8h.html#a995ece644e32fe774514dede1f148a56ad64db552f8535933c4512e5f49a776e9">ONE_BYTE</a></div><div class="ttdeci">@ ONE_BYTE</div><div class="ttdef"><b>Definition:</b> zeus_operator.h:20</div></div>
+<div class="ttc" id="autils_8c_html_a63454af91acf70c90a7b2adfbf3f50de"><div class="ttname"><a href="utils_8c.html#a63454af91acf70c90a7b2adfbf3f50de">device_memory_read_ddr_data</a></div><div class="ttdeci">bool device_memory_read_ddr_data(uint8_t *read_data, void *data_addr, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:143</div></div>
+<div class="ttc" id="autils_8c_html_a4a96b4c30bdca59921bdc8bfd5c8b456"><div class="ttname"><a href="utils_8c.html#a4a96b4c30bdca59921bdc8bfd5c8b456">verify_int8_data</a></div><div class="ttdeci">bool verify_int8_data(uint8_t *true_nchw_data, uint8_t *ddr_nchw_data, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:443</div></div>
+<div class="ttc" id="addr__info_8c_html_ae648785585cbde48d7be1db00a9ab3d5"><div class="ttname"><a href="ddr__info_8c.html#ae648785585cbde48d7be1db00a9ab3d5">larger_model_test_ddr_read_reg8</a></div><div class="ttdeci">uint8_t larger_model_test_ddr_read_reg8(void *data_addr)</div><div class="ttdef"><b>Definition:</b> ddr_info.c:146</div></div>
+<div class="ttc" id="astructDATA__INFO_html_a9e04148a25717ba83d2d5beea55b57d0"><div class="ttname"><a href="structDATA__INFO.html#a9e04148a25717ba83d2d5beea55b57d0">DATA_INFO::align_data_count</a></div><div class="ttdeci">uint32_t align_data_count</div><div class="ttdef"><b>Definition:</b> utils.c:9</div></div>
+<div class="ttc" id="autils_8h_html_aead9eb939dcd991cbe197f508534cf49"><div class="ttname"><a href="utils_8h.html#aead9eb939dcd991cbe197f508534cf49">read_ddr_data</a></div><div class="ttdeci">bool read_ddr_data(uint8_t *read_data, void *data_addr, uint32_t data_len)</div><div class="ttdef"><b>Definition:</b> utils.c:218</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

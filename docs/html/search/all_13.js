@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['raw_267',['raw',['../structCORE__MAP__X__ADDRL.html#a051793fce013369dbaa0820771038ea1',1,'CORE_MAP_X_ADDRL::raw()'],['../cJSON_8h.html#a788db922597cf2fb6389e278f822e59f',1,'raw():&#160;cJSON.h']]],
+  ['rd_5for_5fwr_5fflag_268',['rd_or_wr_flag',['../structdebug__conf.html#acbff0b3fa41bdf0a5be0c2e30822dc72',1,'debug_conf']]],
+  ['read_5fddr_5fdata_269',['read_ddr_data',['../utils_8c.html#aead9eb939dcd991cbe197f508534cf49',1,'read_ddr_data(uint8_t *read_data, void *data_addr, uint32_t data_len):&#160;utils.c'],['../utils_8h.html#aead9eb939dcd991cbe197f508534cf49',1,'read_ddr_data(uint8_t *read_data, void *data_addr, uint32_t data_len):&#160;utils.c']]],
+  ['read_5fddr_5fdata_5fto_5ffile_270',['read_ddr_data_to_file',['../utils_8c.html#aae15631f5e08621b3294a3e93a6d05eb',1,'read_ddr_data_to_file(uint8_t *file_name, void *data_addr, uint32_t data_len, DATA_PARAM data_param):&#160;utils.c'],['../utils_8h.html#aae15631f5e08621b3294a3e93a6d05eb',1,'read_ddr_data_to_file(uint8_t *file_name, void *data_addr, uint32_t data_len, DATA_PARAM data_param):&#160;utils.c']]],
+  ['read_5fform_5fl2_5ffile_271',['read_form_l2_file',['../structdebug__conf.html#a458305272b469074e8c9626e3bc40493',1,'debug_conf']]],
+  ['read_5fhermes_5freg_272',['read_hermes_reg',['../zeus__operator_8c.html#a157d89b8b4acc4f7533259f404472c0c',1,'zeus_operator.c']]],
+  ['read_5flarger_5fmodel_5fdata_273',['read_larger_model_data',['../utils_8c.html#a7fc7b5d82e78f2ecbb62c65daf2a276a',1,'read_larger_model_data(uint8_t *read_data, void *data_addr, uint32_t data_len):&#160;utils.c'],['../utils_8h.html#a7fc7b5d82e78f2ecbb62c65daf2a276a',1,'read_larger_model_data(uint8_t *read_data, void *data_addr, uint32_t data_len):&#160;utils.c']]],
+  ['read_5fnpu_5freg_274',['read_npu_reg',['../zeus__operator_8c.html#a91bf0448ef0bc637ce7191a9f01b068d',1,'read_npu_reg(uint32_t core_id, ZEUS_DEVICE_TYPE run_zeus_type, uint32_t addr, uint32_t spi_num):&#160;zeus_operator.c'],['../zeus__operator_8h.html#a91bf0448ef0bc637ce7191a9f01b068d',1,'read_npu_reg(uint32_t core_id, ZEUS_DEVICE_TYPE run_zeus_type, uint32_t addr, uint32_t spi_num):&#160;zeus_operator.c']]],
+  ['read_5fsome_5freg_275',['read_some_reg',['../debug__config_8c.html#a120b840e39b1d41eb9b86f9dbd0d4875',1,'debug_config.c']]],
+  ['read_5fsram_5finst_276',['read_sram_inst',['../debug__config_8c.html#a46e81b268d12c8b1d3f34dd2ea0ed898',1,'debug_config.c']]],
+  ['read_5fsram_5finst_5fflag_277',['read_sram_inst_flag',['../structdebug__conf.html#aabefe9185831fd40879a2d6fb31e024c',1,'debug_conf']]],
+  ['read_5fsram_5finst_5flen_278',['read_sram_inst_len',['../structdebug__conf.html#af3ed9886f00f74252b71d664faa4f493',1,'debug_conf']]],
+  ['read_5ftrace_5freg_279',['read_trace_reg',['../zeus__operator_8c.html#af01ee99cb6fc5223391721a790ba2b11',1,'read_trace_reg(uint32_t core_id, ZEUS_DEVICE_TYPE run_zeus_type, uint32_t addr, uint32_t spi_num):&#160;zeus_operator.c'],['../zeus__operator_8h.html#af01ee99cb6fc5223391721a790ba2b11',1,'read_trace_reg(uint32_t core_id, ZEUS_DEVICE_TYPE run_zeus_type, uint32_t addr, uint32_t spi_num):&#160;zeus_operator.c']]],
+  ['reallocate_280',['reallocate',['../structinternal__hooks.html#a5dd48d5c2f2b1cf4f6eec5df6205e15c',1,'internal_hooks']]],
+  ['recurse_281',['recurse',['../cJSON_8h.html#afc8d1c385c6dc37e1c5b640869ce4ab6',1,'cJSON.h']]],
+  ['reg32_282',['REG32',['../zeus__operator_8h.html#ab36ca64870d974df84f70a61b828b07b',1,'zeus_operator.h']]],
+  ['reg64_283',['REG64',['../zeus__operator_8h.html#ab90c3a25b747933cfcb3c7daf02e34b4',1,'zeus_operator.h']]],
+  ['reg8_284',['REG8',['../zeus__operator_8h.html#a3135494c31c4325c179bfefcb09bed86',1,'zeus_operator.h']]],
+  ['replacement_285',['replacement',['../cJSON_8h.html#a10573fccca598ec39809e8beb3f7f791',1,'cJSON.h']]],
+  ['require_5fnull_5fterminated_286',['require_null_terminated',['../cJSON_8h.html#a68bc5d2265c7694323a75615f7ac0130',1,'cJSON.h']]],
+  ['return_5fparse_5fend_287',['return_parse_end',['../cJSON_8h.html#a7725ae4fa33fc499614c6895ee9ee44a',1,'cJSON.h']]],
+  ['reverse_5fendian_288',['reverse_endian',['../debug__config_8c.html#a46688dba78b2c703eac5919e6e464dbb',1,'debug_config.c']]]
+];

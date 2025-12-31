@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Myolov8_pose_demo: camera::YoloV8sPostprocess类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Myolov8_pose_demo
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecamera.html">camera</a></li><li class="navelem"><a class="el" href="classcamera_1_1YoloV8sPostprocess.html">YoloV8sPostprocess</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classcamera_1_1YoloV8sPostprocess-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">camera::YoloV8sPostprocess类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>YOLOv8s 后处理类  
+ <a href="classcamera_1_1YoloV8sPostprocess.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="yolov8s__postprocess_8h_source.html">yolov8s_postprocess.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab094fe272b7b30bca8c6a20364d33f9a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcamera_1_1YoloV8sPostprocess.html#ab094fe272b7b30bca8c6a20364d33f9a">YoloV8sPostprocess</a> ()</td></tr>
+<tr class="memdesc:ab094fe272b7b30bca8c6a20364d33f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数，初始化后处理对象  <a href="classcamera_1_1YoloV8sPostprocess.html#ab094fe272b7b30bca8c6a20364d33f9a">更多...</a><br /></td></tr>
+<tr class="separator:ab094fe272b7b30bca8c6a20364d33f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ff1d48f3237f6f3e04e7d53556c7512"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcamera_1_1YoloV8sPostprocess.html#a0ff1d48f3237f6f3e04e7d53556c7512">~YoloV8sPostprocess</a> ()</td></tr>
+<tr class="memdesc:a0ff1d48f3237f6f3e04e7d53556c7512"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数，释放资源  <a href="classcamera_1_1YoloV8sPostprocess.html#a0ff1d48f3237f6f3e04e7d53556c7512">更多...</a><br /></td></tr>
+<tr class="separator:a0ff1d48f3237f6f3e04e7d53556c7512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d4ef40e219406424a5e7da33e356659"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcamera_1_1YoloV8sPostprocess.html#a3d4ef40e219406424a5e7da33e356659">Init</a> ()</td></tr>
+<tr class="memdesc:a3d4ef40e219406424a5e7da33e356659"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化后处理模块  <a href="classcamera_1_1YoloV8sPostprocess.html#a3d4ef40e219406424a5e7da33e356659">更多...</a><br /></td></tr>
+<tr class="separator:a3d4ef40e219406424a5e7da33e356659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fb0787badd92faf22417488f57fd453"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcamera_1_1YoloV8sPostprocess.html#a7fb0787badd92faf22417488f57fd453">DeInit</a> ()</td></tr>
+<tr class="memdesc:a7fb0787badd92faf22417488f57fd453"><td class="mdescLeft">&#160;</td><td class="mdescRight">反初始化，释放资源  <a href="classcamera_1_1YoloV8sPostprocess.html#a7fb0787badd92faf22417488f57fd453">更多...</a><br /></td></tr>
+<tr class="separator:a7fb0787badd92faf22417488f57fd453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bfdeded6bea471845d1d37ff91a9e0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcamera_1_1YoloV8sPostprocess.html#a4bfdeded6bea471845d1d37ff91a9e0f">save_tensor_binary</a> (const torch::Tensor &amp;tensor, const <a class="el" href="cJSON_8h.html#addf925fe055723aa55a381a1ba45bda2">std::string</a> &amp;filename)</td></tr>
+<tr class="memdesc:a4bfdeded6bea471845d1d37ff91a9e0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">保存张量为二进制文件  <a href="classcamera_1_1YoloV8sPostprocess.html#a4bfdeded6bea471845d1d37ff91a9e0f">更多...</a><br /></td></tr>
+<tr class="separator:a4bfdeded6bea471845d1d37ff91a9e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf1ae31f839a58d87b33ecf8c358e6a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcamera_1_1YoloV8sPostprocess.html#abf1ae31f839a58d87b33ecf8c358e6a9">postprocess</a> (<a class="el" href="structcamera_1_1OUT__DATA.html">OUT_DATA</a> out_data, cv::Mat &amp;cv_image, <a class="el" href="structcamera_1_1DetectionResult.html">DetectionResult</a> &amp;det_result, bool draw_save_image=<a class="el" href="cJSON_8c.html#a65e9886d74aaee76545e83dd09011727">false</a>)</td></tr>
+<tr class="memdesc:abf1ae31f839a58d87b33ecf8c358e6a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">YOLOv8 模型的后处理函数  <a href="classcamera_1_1YoloV8sPostprocess.html#abf1ae31f839a58d87b33ecf8c358e6a9">更多...</a><br /></td></tr>
+<tr class="separator:abf1ae31f839a58d87b33ecf8c358e6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>YOLOv8s 后处理类 </p>
+<p>负责模型输出的解析、结果绘制及保存。 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ab094fe272b7b30bca8c6a20364d33f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab094fe272b7b30bca8c6a20364d33f9a">&#9670;&nbsp;</a></span>YoloV8sPostprocess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">camera::YoloV8sPostprocess::YoloV8sPostprocess </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数，初始化后处理对象 </p>
+
+</div>
+</div>
+<a id="a0ff1d48f3237f6f3e04e7d53556c7512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ff1d48f3237f6f3e04e7d53556c7512">&#9670;&nbsp;</a></span>~YoloV8sPostprocess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">camera::YoloV8sPostprocess::~YoloV8sPostprocess </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>析构函数，释放资源 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcamera_1_1YoloV8sPostprocess_a0ff1d48f3237f6f3e04e7d53556c7512_cgraph.png" border="0" usemap="#classcamera_1_1YoloV8sPostprocess_a0ff1d48f3237f6f3e04e7d53556c7512_cgraph" alt=""/></div>
+<map name="classcamera_1_1YoloV8sPostprocess_a0ff1d48f3237f6f3e04e7d53556c7512_cgraph" id="classcamera_1_1YoloV8sPostprocess_a0ff1d48f3237f6f3e04e7d53556c7512_cgraph">
+<area shape="rect" title="析构函数，释放资源" alt="" coords="5,5,212,47"/>
+<area shape="rect" href="classcamera_1_1YoloV8sPostprocess.html#a7fb0787badd92faf22417488f57fd453" title="反初始化，释放资源" alt="" coords="260,5,467,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a7fb0787badd92faf22417488f57fd453"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fb0787badd92faf22417488f57fd453">&#9670;&nbsp;</a></span>DeInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool camera::YoloV8sPostprocess::DeInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>反初始化，释放资源 </p>
+<dl class="section return"><dt>返回</dt><dd>释放是否成功 </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcamera_1_1YoloV8sPostprocess_a7fb0787badd92faf22417488f57fd453_icgraph.png" border="0" usemap="#classcamera_1_1YoloV8sPostprocess_a7fb0787badd92faf22417488f57fd453_icgraph" alt=""/></div>
+<map name="classcamera_1_1YoloV8sPostprocess_a7fb0787badd92faf22417488f57fd453_icgraph" id="classcamera_1_1YoloV8sPostprocess_a7fb0787badd92faf22417488f57fd453_icgraph">
+<area shape="rect" title="反初始化，释放资源" alt="" coords="260,5,467,47"/>
+<area shape="rect" href="classcamera_1_1YoloV8sPostprocess.html#a0ff1d48f3237f6f3e04e7d53556c7512" title="析构函数，释放资源" alt="" coords="5,5,212,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3d4ef40e219406424a5e7da33e356659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d4ef40e219406424a5e7da33e356659">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool camera::YoloV8sPostprocess::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化后处理模块 </p>
+<dl class="section return"><dt>返回</dt><dd>初始化是否成功 </dd></dl>
+
+</div>
+</div>
+<a id="abf1ae31f839a58d87b33ecf8c358e6a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1ae31f839a58d87b33ecf8c358e6a9">&#9670;&nbsp;</a></span>postprocess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool camera::YoloV8sPostprocess::postprocess </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcamera_1_1OUT__DATA.html">OUT_DATA</a>&#160;</td>
+          <td class="paramname"><em>out_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>cv_image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcamera_1_1DetectionResult.html">DetectionResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>det_result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>draw_save_image</em> = <code><a class="el" href="cJSON_8c.html#a65e9886d74aaee76545e83dd09011727">false</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>YOLOv8 模型的后处理函数 </p>
+<p>该函数用于对模型推理输出结果进行后处理，包括解码检测框、筛选目标、绘制结果等操作。 可选地将结果绘制到原图上并保存。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_data</td><td>模型推理输出数据结构体，包含输出 tensor 数据及长度信息 </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">cv_image</td><td>输入图像（BGR 格式），当 draw_save_image 为 true 时， 函数会在该图像上绘制检测框 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">det_result</td><td>检测结果结构体，包含每个目标的类别、置信度和边界框坐标 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">draw_save_image</td><td>是否在图像上绘制检测结果并保存，默认为 false</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true 表示后处理成功 <br  />
+ </dd>
+<dd>
+false 表示后处理失败（如数据为空或解析错误） </dd></dl>
+
+</div>
+</div>
+<a id="a4bfdeded6bea471845d1d37ff91a9e0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bfdeded6bea471845d1d37ff91a9e0f">&#9670;&nbsp;</a></span>save_tensor_binary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void camera::YoloV8sPostprocess::save_tensor_binary </td>
+          <td>(</td>
+          <td class="paramtype">const torch::Tensor &amp;&#160;</td>
+          <td class="paramname"><em>tensor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="cJSON_8h.html#addf925fe055723aa55a381a1ba45bda2">std::string</a> &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>保存张量为二进制文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tensor</td><td>要保存的张量 </td></tr>
+    <tr><td class="paramname">filename</td><td>输出文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>yolov8s/<a class="el" href="yolov8s__postprocess_8h_source.html">yolov8s_postprocess.h</a></li>
+<li>yolov8s/<a class="el" href="yolov8s__postprocess_8cc.html">yolov8s_postprocess.cc</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

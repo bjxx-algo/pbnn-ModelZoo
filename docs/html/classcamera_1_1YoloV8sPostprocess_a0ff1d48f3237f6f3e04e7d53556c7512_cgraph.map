@@ -1,0 +1,4 @@
+<map id="camera::YoloV8sPostprocess::~YoloV8sPostprocess" name="camera::YoloV8sPostprocess::~YoloV8sPostprocess">
+<area shape="rect" id="node1" title="析构函数，释放资源" alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node2" href="$classcamera_1_1YoloV8sPostprocess.html#a7fb0787badd92faf22417488f57fd453" title="反初始化，释放资源" alt="" coords="260,5,467,47"/>
+</map>

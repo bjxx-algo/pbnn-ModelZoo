@@ -1,0 +1,20 @@
+{
+    "version":"1.0.0",
+    "log":{
+        "folder":"./pb_infer",
+        "file_name":"pb_infer.log",
+        "level":"info",
+        "file_size":5242880,
+        "file_num":10,
+        "console": true,
+        "console_level":"error"
+    },
+    "sock":{
+        "path":"/var/run/pb_infer.sock",
+        "max_connection": 5
+    },
+    "scheduler": {
+        "strategy": "FCFS",
+        "max_wokers": 5
+    }
+}

@@ -1,0 +1,5 @@
+<map id="camera::YoloV8sDetector::Detect" name="camera::YoloV8sDetector::Detect">
+<area shape="rect" id="node1" title="对输入图像进行 YOLOv8 检测" alt="" coords="5,23,191,65"/>
+<area shape="rect" id="node2" href="$utils_8c.html#a7aea466b596d37ccf10b87dddcaa0d30" title=" " alt="" coords="239,5,345,32"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a6d498a0a468bfab3973296fbf6af7b6f" title=" " alt="" coords="245,56,339,83"/>
+</map>

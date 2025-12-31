@@ -1,0 +1,19 @@
+PROJECT_NAME           = "Myolov8_pose_demo"
+OUTPUT_DIRECTORY       = docs
+OUTPUT_LANGUAGE        = Chinese
+ALLOW_UNICODE_NAMES    = YES
+
+INPUT                  = driver_adapter yolov8s
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+
+HAVE_DOT               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+
+OPTIMIZE_OUTPUT_FOR_C  = NO
+MARKDOWN_SUPPORT       = YES
+
