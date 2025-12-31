@@ -1,4 +1,0 @@
-<map id="camera::preprocess" name="camera::preprocess">
-<area shape="rect" id="node1" title="对输入图像进行预处理，返回 Torch 张量" alt="" coords="5,5,156,32"/>
-<area shape="rect" id="node2" href="$namespacecamera.html#a2ab6f78545ccd05b95abc711a7862789" title="对输入图像进行缩放与填充（letterbox）处理" alt="" coords="204,5,343,32"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="driver_adapter/reg/spi_ctrl.h" name="driver_adapter/reg/spi_ctrl.h">
-<area shape="rect" id="node1" title=" " alt="" coords="364,5,507,47"/>
-<area shape="rect" id="node2" href="$debug__config_8c.html" title=" " alt="" coords="5,95,167,136"/>
-<area shape="rect" id="node3" href="$spi__ctrl_8c.html" title=" " alt="" coords="191,95,333,136"/>
-<area shape="rect" id="node4" href="$trace__config_8c.html" title=" " alt="" coords="358,95,513,136"/>
-<area shape="rect" id="node5" href="$zeus__operator_8c.html" title=" " alt="" coords="537,95,688,136"/>
-<area shape="rect" id="node6" href="$yolov8s__detector_8cc.html" title=" " alt="" coords="712,102,919,129"/>
-</map>

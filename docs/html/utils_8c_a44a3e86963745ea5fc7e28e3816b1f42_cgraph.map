@@ -1,5 +1,0 @@
-<map id="device_memory_write_data_to_ddr" name="device_memory_write_data_to_ddr">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,172,76"/>
-<area shape="rect" id="node2" href="$ddr__info_8c.html#aec0da130117afaa6982a2179fa7f9f20" title=" " alt="" coords="220,5,388,47"/>
-<area shape="rect" id="node3" href="$neon__memcpy_8c.html#adb86c863ba8460aafd65378e6d611c72" title=" " alt="" coords="245,71,363,98"/>
-</map>

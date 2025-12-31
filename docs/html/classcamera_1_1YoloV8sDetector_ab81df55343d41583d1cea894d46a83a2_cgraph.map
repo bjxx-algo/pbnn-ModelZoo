@@ -1,9 +1,0 @@
-<map id="camera::YoloV8sDetector::Init" name="camera::YoloV8sDetector::Init">
-<area shape="rect" id="node1" title="初始化检测器，包括模型加载和必要资源分配" alt="" coords="5,99,191,141"/>
-<area shape="rect" id="node2" href="$zeus__operator_8c.html#a4c78696362fa9af1ae4eacec39339520" title=" " alt="" coords="259,69,333,96"/>
-<area shape="rect" id="node6" href="$zeus__operator_8c.html#a5227ad03125e6ae07b3a2b81ec6961f8" title=" " alt="" coords="239,132,353,159"/>
-<area shape="rect" id="node3" href="$spi__ctrl_8c.html#a363842db03e5a6c616033de4616aa447" title=" " alt="" coords="439,5,508,32"/>
-<area shape="rect" id="node4" href="$935__reg__ctrl_8c.html#a2b6ec2413aecba1019750e10eab45216" title=" " alt="" coords="401,56,545,83"/>
-<area shape="rect" id="node5" href="$ddr__info_8c.html#a89abee82cdb65d2c360c06c0074298fc" title=" " alt="" coords="423,107,523,133"/>
-<area shape="rect" id="node7" href="$935__reg__ctrl_8c.html#a6dba33434659bebdd22f09bbf0d9e02a" title=" " alt="" coords="406,157,541,184"/>
-</map>
