@@ -2,8 +2,6 @@
 build/
 cmake-build-*/
 *.o
-*.so
-*.a
 
 # python
 __pycache__/
@@ -22,3 +20,10 @@ logs/
 
 # system
 .DS_Store
+
+# onnxruntime headers (使用外部路径，不入仓)
+include/deps/
+
+# torch libs (too large for GitHub)
+lib/pb_sdk/libtorch*.so
+lib/pb_sdk/libc10.so

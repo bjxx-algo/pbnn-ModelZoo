@@ -6,15 +6,19 @@
 #include <vector>
 
 enum class UserRequestType {
-    INIT_MODEL,
+    INIT_MODEL = 0,
     TERMINATE_MODEL,
     CHAT_COMPLETIONS,
     CHAT_COMPLETIONS_STREAM,
     ABORT_CHAT,
     LOAD_KV_CACHE,
     SAVE_KV_CACHE,
+    START_TRACE,
+    STOP_TRACE,
 
     CNN_CHAT_COMPLETIONS,
+    GET_NPU_STATUS,
+    UNLOAD_MODEL,
 };
 
 enum ModelType {
@@ -30,6 +34,7 @@ enum ModelType {
     QWEN_2_5VL_7B_DA04 = 10,
     QWEN_2_5OMNI_7B_DA04 = 11,
     INTERNVL3_8B = 12,
+    QWEN_2_5VL_7B_EAGLE3_DA04 = 13,
     FIRST_CNN_MODEL= 1000,
     RESNET50 = FIRST_CNN_MODEL,
     REPVGG,
@@ -56,6 +61,8 @@ enum ErrCode {
     POST_ATTN_PREFILL_ERROR,
     POST_ATTN_DECODE_ERROR,
     LM_HEAD_ERROR,
+    INIT_PLATFORM_ERROR,
+    MODEL_MISMATCH_PLATFORM,
 };
 
 struct FunctionCall {
@@ -140,6 +147,10 @@ struct Metric {
     double decode_speed;
     double ve_time;
     double preprocess_time;
+    double average_accept_length;
+    int max_accept_length;
+    int min_accept_length;
+    double iterations_speed;
 };
 
 struct ChatCompletionChoice {
@@ -201,6 +212,7 @@ struct PrefixCache {
 };
 
 struct CnnChatData {
+    std::string task_name;
     std::vector<uint8_t> data;
     std::vector<int64_t> data_shape;
     std::string data_type;
@@ -208,75 +220,8 @@ struct CnnChatData {
 
 struct CnnChatCompletions: public ReqEntity {
     std::string case_name;
+    int loop_num = 1;
     std::vector<CnnChatData> data_info;
 };
 
 using stream_cb_t = std::function<void(const ChatCompletionChunkObject &chunk)>;
-
-/**
- * @brief initialize LLM Model
- * 
- * @details Initalize a LLM model specified by model, 
- *          model context length is specified by ctx_len. 
-I*          By default, MiniCPM is initialized with context length is 4096
- * 
- * @param model LLM model, valid value: 
- *                  1:minicpm, (default)
- *                  2:deepseek
- *                  3:phi4
- *                  4:minicpmv1b
- *                  5:qwen
- *                  6:paligemma2
- *                  
- * @param model_root_path model root path
- * @param ctx_len max token context length 
- * @param system_prompt system prompt
- * @return return status specified by ErrCode
- * 
- */
-// int init_model(int model = MINICPM, const std::string& model_root_path="", int ctx_len=4096);
-
-/**
- * @brief run model with user specified prompt
- * 
- * @param input input data for the conversation
- * @param errcode_ret return an appropriate error code. if errcode_ret is null, no error code is returned.
- * @return response for user prompt.
- */
-// ChatCompletionObject chat_completions(const ChatCompletionsRequest &request, int *errcode_ret);
-
-/**
- * @brief run model with user specified prompt
- * 
- * @param input input data for the conversation
- * @param stream_cb callback function to handle response
- * @param errcode_ret return an appropriate error code. if errcode_ret is null, no error code is returned.
- */
-// void chat_completions_stream(const ChatCompletionsRequest &request, stream_cb_t stream_cb, int *errcode_ret);
-
-/**
- * @brief terminate LLM model service
- * 
- * @return ErrCode 
- */
-int terminate_model();
-
-/**
- * @brief Abort current conversation. This function does not block.
- * 
- */
-void abort_request();
-
-void enable_tracer(const std::string &filename);
-
-void disable_tracer();
-
-void use_rm_core_config_reg(int value);
-
-// void set_min_prefill_npu_attn_token(uint32_t min_prefill_npu_attn_token);
-
-void start_engine_server(const std::string &model_root_path);
-
-void load_kv_cache(const PrefixCache &prefix_cache);
-
-PrefixCache save_kv_cache(int len);

@@ -11,15 +11,15 @@
  * @brief 每个NN调用函数所返回的错误码
  */
 typedef enum {
-    PBNN_SUCCESS = 0,                       // 正确情况
-    PBNN_INVALID_ARGUMENT = -6000001,
-    PBNN_INVALID_MODEL = -6000002,
-    PBNN_INVALID_MODEL_HANDLE = -6000003,
-    PBNN_INVALID_FILE = -6000004,
-    PBNN_OUT_OF_MEMORY = -6000005,
-    PBNN_TIMEOUT = -6000006,
-    PBNN_DISCONNECT = -6000007,
-    PBNN_INIT_FAILED = -6000008,
+    PBNN_SUCCESS              = 0,        // 正确情况
+    PBNN_INVALID_ARGUMENT     = -6000001, // 入参错误
+    PBNN_INVALID_MODEL        = -6000002, // 无效模型
+    PBNN_INVALID_MODEL_HANDLE = -6000003, // 无效模型句柄
+    PBNN_INVALID_FILE         = -6000004, // 无效文件
+    PBNN_OUT_OF_MEMORY        = -6000005, // 内存溢出
+    PBNN_TIMEOUT              = -6000006, // 超时
+    PBNN_DISCONNECT           = -6000007, // 断开连接
+    PBNN_INIT_FAILED          = -6000008, // 初始化失败
 } PBNNERRCODE;
 
 class ModelHandler
@@ -37,39 +37,41 @@ public:
      * 
      * @return 错误码
      */
-    int init(int model, const std::string& model_path, int ctx_len = 4096);
-    /**
-     * @brief llm输入对话请求
-     * 
-     * @param [in]request 对话请求信息
-     * @param [in]is_stram 是否为流式输入
-     */
-    void input(const ChatCompletionsRequest &request, bool is_stream);
-    /**
-     * @brief cnn输入对话请求
-     * 
-     * @param [in]request 对话请求信息
-     */
-    void input(const CnnChatCompletions &request);
-    /**
-     * @brief 执行对话
-     * 
-     * @return 错误码
-     */
-    int execute();
-    /**
-     * @brief 获取对话输出
-     * 
-     * @return 对话响应信息
-     */
-    std::variant<ChatCompletionObject, ChatCompletionChunkObject, CnnChatCompletions> output();
-
+    int init(const std::string& model_name, const std::string& model_path, int ctx_len = 4096);
+    int unload();
     /**
      * @brief 获取连接状态
      * 
      * @return true-已连接, false-未连接
      */
     bool is_connected();
+
+    /**
+     * @brief 输入对话请求
+     * 
+     * @param [in]request 对话请求信息
+     */
+    void input(const std::variant<ChatCompletionsRequest, CnnChatCompletions> &request);
+    /**
+     * @brief 执行对话
+     * 
+     * @param [in]stream_cb 入参非空时，表示执行流式对话(仅在llm模型中有效)
+     * @return 错误码
+     */
+    int execute(stream_cb_t stream_cb);
+    /**
+     * @brief 获取llm(非流式)和cnn对话输出
+     * 
+     * @return 对话响应信息
+     */
+    std::variant<ChatCompletionObject, CnnChatCompletions> output();
+
+    int load_kv_cache(const PrefixCache &prefix_cache);
+
+    PrefixCache save_kv_cache(int len);
+    
+    void start_trace(const std::string& trace_file);
+    void stop_trace();
 
 private:
     /**
@@ -87,16 +89,14 @@ private:
 
 private:
     int m_client_fd;
-    int model_type;
+    std::string m_model_name;
 
     std::atomic<bool> m_have_output;
     std::atomic<bool> m_execute_llm;
     std::atomic<bool> m_connected;
 
-    bool                      m_stream;
-    std::vector<uint8_t>      m_request;
-    ChatCompletionObject      m_response;
-    ChatCompletionChunkObject m_response_stream;
-    CnnChatCompletions        m_cnn_response;
+    std::vector<uint8_t>    m_request;
+    ChatCompletionObject    m_response;
+    CnnChatCompletions      m_cnn_response;
 };
 
