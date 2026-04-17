@@ -29,7 +29,7 @@ conf 0.755859 cls 18 label ok 0.75 box x1 483.97 box y1 137.667 box x2 613.099 b
 ✅ output saved: ./results/yolov8s_output_20251224_120632_264.jpg
 Postprocess OK.
 ```
-注*：/data/fwj/model/yolov8s.pbnn模型路径为绝对路径
+> 注：/data/fwj/model/yolov8s.pbnn模型路径为绝对路径
 
 ```
 转换模型和推理脚本 ./build/yolov8_demo 运行成功后，推理的图片结果保存在 ./results/yolov8s_output_20251224_120632_264.jpg
